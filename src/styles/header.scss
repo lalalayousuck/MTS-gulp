@@ -1,0 +1,47 @@
+.header {
+  height: 76px;
+  vertical-align: middle;
+
+  li {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 76px;
+
+    a {
+      margin-right: 34px;
+      color: #535756;
+      transition: opacity 0.2s;
+      font-size: 15px;
+      letter-spacing: 1.1px;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    &:nth-child(2) a {
+      margin-right: 28px;
+    }
+
+    &:nth-child(4) a {
+      margin-right: 26px;
+    }
+
+    &:last-child {
+      position: relative;
+      float: right;
+      margin: 3px 146px 0 0;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #858c89;
+
+      &:after {
+        @include icon(mts-logo__header);
+        position: absolute;
+        top: 21px;
+        right: -106px;
+      }
+    }
+  }    
+}

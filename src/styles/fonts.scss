@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'corpid-black';
+  src: url("/assets/corpide1sscd-black.eot");
+  src: url("/assets/corpide1sscd-black.eot?#iefix") format("embedded-opentype"), url("/assets/corpide1sscd-black.woff2") format("woff2"), url("/assets/corpide1sscd-black.woff") format("woff"), url("/assets/corpide1sscd-black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'corpid';
+  src: url("/assets/corpide1sscd-bold.eot");
+  src: url("/assets/corpide1sscd-bold.eot?#iefix") format("embedded-opentype"), url("/assets/corpide1sscd-bold.woff2") format("woff2"), url("/assets/corpide1sscd-bold.woff") format("woff"), url("/assets/corpide1sscd-bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'orpid';
+  src: url("/assets/corpide1sscd-heavy.eot");
+  src: url("/assets/corpide1sscd-heavy.eot?#iefix") format("embedded-opentype"), url("/assets/corpide1sscd-heavy.woff2") format("woff2"), url("/assets/corpide1sscd-heavy.woff") format("woff"), url("/assets/corpide1sscd-heavy.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'corpid';
+  src: url("/assets/corpide1sscd-light.eot");
+  src: url("/assets/corpide1sscd-light.eot?#iefix") format("embedded-opentype"), url("/assets/corpide1sscd-light.woff2") format("woff2"), url("/assets/corpide1sscd-light.woff") format("woff"), url("/assets/corpide1sscd-light.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'corpid';
+  src: url("/assets/corpide1sscd-regular.eot");
+  src: url("/assets/corpide1sscd-regular.eot?#iefix") format("embedded-opentype"), url("/assets/corpide1sscd-regular.woff2") format("woff2"), url("/assets/corpide1sscd-regular.woff") format("woff"), url("/assets/corpide1sscd-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("/assets/icomoon.eot");
+  src: url("/assets/icomoon.svg") format("svg"), url("/assets/icomoon.woff") format("woff"), url("/assets/icomoon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  font-family: "corpid";
+}

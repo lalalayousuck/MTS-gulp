@@ -1,0 +1,58 @@
+.steps {
+  margin-bottom: 107px; }
+  .steps > p {
+    font-size: 15px;
+    line-height: 22px;
+    font-family: Open Sans, Arial;
+    margin-top: 61px;
+    margin-bottom: 49px; }
+  .steps .steps-row {
+    display: block; }
+    .steps .steps-row li {
+      display: inline-block;
+      list-style: none;
+      position: relative;
+      vertical-align: top;
+      height: 130px;
+      margin-right: 65px; }
+      .steps .steps-row li:after {
+        font-family: 'icomoon';
+        content: '\e906';
+        display: block;
+        position: absolute;
+        font-size: 12px;
+        top: 18px;
+        right: -50px; }
+      .steps .steps-row li:last-child {
+        margin: 0; }
+        .steps .steps-row li:last-child:after {
+          display: none; }
+      .steps .steps-row li i {
+        font-style: normal; }
+        .steps .steps-row li i:before {
+          font-family: 'icomoon'; }
+      .steps .steps-row li p {
+        font-size: 15px;
+        line-height: 18px;
+        font-weight: 600;
+        font-family: Open Sans, Arial; }
+      .steps .steps-row li.step-1 i {
+        font-size: 57px; }
+        .steps .steps-row li.step-1 i:before {
+          content: '\e903'; }
+      .steps .steps-row li.step-1 p {
+        margin: 22px 0 0 0; }
+      .steps .steps-row li.step-2 i {
+        margin-top: 9px;
+        font-size: 40px; }
+        .steps .steps-row li.step-2 i:before {
+          content: '\e904'; }
+      .steps .steps-row li.step-2 p {
+        margin: 34px 0 0 0; }
+      .steps .steps-row li.step-3 i {
+        margin-top: 9px;
+        font-size: 43px; }
+        .steps .steps-row li.step-3 i:before {
+          content: '\e905'; }
+      .steps .steps-row li.step-3 p {
+        margin: 34px 0 0 0; }

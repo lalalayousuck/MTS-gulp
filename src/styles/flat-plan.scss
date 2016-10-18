@@ -1,0 +1,100 @@
+.flat-plan {
+  position: relative;
+  margin-right: -68px;
+  width: 698px;
+  height: 469px;
+  float: right;
+  background-image: url("/assets/bg-plan.svg"); }
+  .flat-plan .room {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: all .5s;
+            transition: all .5s;
+    cursor: pointer;
+    background-repeat: no-repeat; }
+    .flat-plan .room:hover {
+      opacity: 1; }
+      .flat-plan .room:hover span {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px); }
+    .flat-plan .room.selected {
+      opacity: 1; }
+      .flat-plan .room.selected span {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px); }
+    .flat-plan .room span {
+      display: block;
+      font-size: 17px;
+      line-height: 17px;
+      color: #be312a;
+      font-family: Open Sans, Arial;
+      font-weight: 600;
+      -webkit-transform: translateY(-10px);
+              transform: translateY(-10px);
+      -webkit-transition: all .5s;
+              transition: all .5s;
+      position: absolute; }
+    .flat-plan .room:hover {
+      opacity: 1; }
+      .flat-plan .room:hover span {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px); }
+    .flat-plan .room.hall {
+      width: 175px;
+      height: 304px;
+      top: 0;
+      left: 0;
+      background-position: 13px 27px;
+      background-size: 94px;
+      background-image: url("/assets/bg-hall.svg"); }
+      .flat-plan .room.hall span {
+        top: 50px;
+        left: -125px; }
+    .flat-plan .room.sittingroom {
+      background-image: url("/assets/bg-sittingroom.svg");
+      width: 295px;
+      height: 273px;
+      left: 180px;
+      top: 33px; }
+      .flat-plan .room.sittingroom span {
+        top: -65px;
+        left: 120px; }
+    .flat-plan .room.childrens-room {
+      background-image: url("/assets/bg-childrenroom.svg");
+      width: 203px;
+      height: 139px;
+      right: -2px;
+      top: 38px; }
+      .flat-plan .room.childrens-room span {
+        top: 50px;
+        right: -110px; }
+    .flat-plan .room.bathroom {
+      background-image: url("/assets/bg-bathroom.svg");
+      width: 164px;
+      height: 147px;
+      left: 14px;
+      bottom: 8px; }
+      .flat-plan .room.bathroom span {
+        left: -120px;
+        top: 100px; }
+    .flat-plan .room.kitchen {
+      background-image: url("/assets/bg-kitchen.svg");
+      width: 306px;
+      height: 148px;
+      left: 184px;
+      bottom: 8px;
+      background-position: 34px 11px;
+      background-size: 273px; }
+      .flat-plan .room.kitchen span {
+        bottom: -60px;
+        left: 130px; }
+    .flat-plan .room.bedroom {
+      background-image: url("/assets/bg-bedroom.svg");
+      bottom: 9px;
+      right: 13px;
+      height: 275px;
+      width: 188px;
+      background-position: 1px 1px; }
+      .flat-plan .room.bedroom span {
+        right: -125px;
+        top: 110px; }

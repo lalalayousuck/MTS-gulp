@@ -1,0 +1,161 @@
+.container {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.section-flat-plan,
+.section-room {
+  min-height: 578px;
+}
+
+.col {
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.col-left {
+  width: 380px;
+}
+
+.col-right {
+  width: 560px;
+}
+
+.section-tech {
+  height: 586px;
+  background-image: url(/assets/tech-bg.jpg);
+  background-position-x: center; 
+  background-size: cover;
+}
+
+.section-tech_infoblock {
+  float: right;
+  margin: 200px 33px 0 0;
+  width: 278px !important;
+  padding: 35px 0 35px 20px !important;
+
+  &:before {
+    @include icon(red-brush-tech);
+    position: absolute;
+    top: -20px;
+    left: -19px;
+    z-index: -1;
+  }
+}
+
+.section-tech_gradient {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #f4f4f4, transparent);
+}
+
+.section-gpon {
+  position: relative;
+  height: 90px;
+  background-color: #0082c5;
+
+  a {
+    float: right;
+    margin-top: -90px;
+  }
+}
+
+.section-gpon_title {
+  margin-left: -5px;
+  font-size: 31px;
+  line-height: 90px;
+  color: white;
+  font-weight: 700;
+}
+
+// .content-wrapper.repair-abc {
+//   background-image: url("/assets/bg-repair.jpg");
+//   background-repeat: no-repeat;
+//   background-position: center right;
+//   background-size: cover;}
+
+// .content-wrapper.shadow-top {
+//   box-shadow: 0px -3px 6px 0px rgba(0, 0, 0, 0.2); }
+
+// .content-wrapper.red {
+//   background-color: #e30613;
+//   color: #fff;
+//   text-align: center; }
+
+// .content-wrapper.grey {
+//   background-color: #eeeeee; }
+//   .content-wrapper.grey .content h2 {
+//     margin: 50px 0 45px 0; }
+//   .content-wrapper.grey .content .gpon-block {
+//     /*cursor: pointer;*/
+//     height: 340px;
+//     overflow: hidden;
+//     background-image: url("/assets/bg-gpon.jpg");
+//     background-repeat: no-repeat;
+//     background-position: bottom center; }
+//     .content-wrapper.grey .content .gpon-block .project-name {
+//       width: 474px;
+//       height: 346px;
+//       margin: -5px 0 0 20px;
+//       overflow: hidden;
+//       background-image: url("/assets/bg-gore.png"); }
+//       .content-wrapper.grey .content .gpon-block .project-name h2 {
+//         color: #fff;
+//         font-size: 30px;
+//         line-height: 31px;
+//         font-family: 'corpid', Arial;
+//         font-weight: normal;
+//         margin: 69px 0 23px 49px;
+//         text-align: left; }
+//       .content-wrapper.grey .content .gpon-block .project-name p {
+//         font-size: 21px;
+//         line-height: 22.5px;
+//         margin: 0 0 10px 49px;
+//         color: #fff;
+//         font-family: Open Sans, Arial;
+//         letter-spacing: -1px; }
+//       .content-wrapper.grey .content .gpon-block .project-name a {
+//         font-size: 21px;
+//         line-height: 22.5px;
+//         margin: 0 0 21px 49px;
+//         color: #fff;
+//         font-family: Open Sans, Arial; }
+
+// .content-wrapper .content {
+//   width: 100%;
+//   box-sizing: border-box;
+//   clear: both;
+//   overflow: hidden;
+//   max-width: 980px;
+//   margin: 0 auto; }
+//   .content-wrapper .content.blue {
+//     background-color: #0182c6; }
+//   .content-wrapper .content h2 {
+//     font-size: 32px;
+//     line-height: 35px;
+//     text-align: center;
+//     font-family: 'corpid-bold', Arial;
+//     font-weight: normal;
+//     margin: 80px 0 75px 0; }
+//     .content-wrapper .content h2.red {
+//       color: #e30613; }
+//     .content-wrapper .content h2.whats-needing {
+//       margin: 59px 0 75px 0; }
+//   .content-wrapper .content .gpon-ribon {
+//     height: 90px;
+//     margin: 0 35px 0 65px; }
+//     .content-wrapper .content .gpon-ribon h2 {
+//       margin: 0;
+//       padding: 0;
+//       color: #fff;
+//       font-family: 'corpid-bold', Arial;
+//       line-height: 90px;
+//       text-align: left;
+//       font-weight: normal;
+//       float: left; }
+//     .content-wrapper .content .gpon-ribon .logo-mgts {
+//       height: 90px;
+//       width: 147px;
+//       float: right;
+//       background-image: url("/assets/logo-mgts.png"); }

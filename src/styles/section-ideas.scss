@@ -1,0 +1,15 @@
+.section-ideas {
+  padding-bottom: 60px;
+}
+
+.imr-post {
+  display: inline-block;
+  margin: 0 20px 25px 0;
+  width: 270px;
+
+  &:nth-child(2),
+  &:nth-child(4),
+  &:last-child {
+    margin-right: 0;
+  }
+}

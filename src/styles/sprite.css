@@ -1,0 +1,78 @@
+$sprite: (
+	btn_print: (
+		offset-x: -1418px,
+		offset-y: -1074px,
+		width: 21px,
+		height: 22px,
+	),
+	btn_save: (
+		offset-x: -1445px,
+		offset-y: -1074px,
+		width: 22px,
+		height: 20px,
+	),
+	btn_share: (
+		offset-x: -1390px,
+		offset-y: -1074px,
+		width: 22px,
+		height: 23px,
+	),
+	check: (
+		offset-x: -1495px,
+		offset-y: -1074px,
+		width: 12px,
+		height: 9px,
+	),
+	favicon: (
+		offset-x: -1473px,
+		offset-y: -1074px,
+		width: 16px,
+		height: 16px,
+	),
+	grey-brush-main: (
+		offset-x: 0px,
+		offset-y: 0px,
+		width: 1624px,
+		height: 1068px,
+	),
+	grey-line: (
+		offset-x: -515px,
+		offset-y: -1371px,
+		width: 864px,
+		height: 3px,
+	),
+	mts-logo__header: (
+		offset-x: -1301px,
+		offset-y: -1074px,
+		width: 83px,
+		height: 30px,
+	),
+	plus: (
+		offset-x: -1513px,
+		offset-y: -1074px,
+		width: 9px,
+		height: 9px,
+	),
+	red-brush-main: (
+		offset-x: 0px,
+		offset-y: -1074px,
+		width: 509px,
+		height: 365px,
+	),
+	red-brush-tech: (
+		offset-x: -970px,
+		offset-y: -1074px,
+		width: 325px,
+		height: 238px,
+	),
+	valik: (
+		offset-x: -515px,
+		offset-y: -1074px,
+		width: 449px,
+		height: 291px,
+	),
+);
+
+$spritesheet-width: 1624px;
+$spritesheet-height: 1439px;
+$spritesheet-image: "sprite.png";

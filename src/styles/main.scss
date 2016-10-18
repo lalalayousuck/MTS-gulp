@@ -1,0 +1,547 @@
+@import 'modules/reset';
+@import 'modules/tune';
+@import 'modules/icons';
+@import 'modules/mixins';
+@import 'sprite';
+
+@import 'fonts';
+@import 'container';
+@import 'header';
+@import 'section-main';
+@import 'flat-plan';
+@import 'section-list';
+@import 'room-menu';
+@import 'section-room';
+@import 'repairs-menu';
+@import 'planning-block';
+@import 'section-ideas';
+
+.header {
+box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+
+
+
+
+
+
+
+// @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+//   .content-wrapper .content .planing-block .repairs-tabs .repairs-tab form .form-row input.checkbox:before, .content-wrapper .content .planing-block .repairs-tabs .repairs-tab form .form-row input.checkbox:after {
+//     display: none !important;
+//   }
+// }
+
+
+
+
+// .project-block {
+//   height: 577px;
+//   margin-top: -131px;
+//   padding-top: 131px; }
+//   .project-block .project-name {
+//     width: 397px;
+//     height: 294px;
+//     margin: 68px 0 0 19px;
+//     overflow: hidden;
+//     background-image: url("/assets/bg-gore.png");
+//     background-size: cover; }
+//     .project-block .project-name h1 {
+//       margin: 0;
+//       color: #fff;
+//       font-size: 72px;
+//       line-height: 65px;
+//       font-family: 'corpid', Arial;
+//       font-weight: normal;
+//       margin: 72px 0 0 69px; }
+
+
+
+
+
+// .room-menu {
+//   display: block;
+//   background-color: #fff;
+//   margin: 0;
+//   padding: 0 42px 0 54px; }
+//   .room-menu li {
+//     display: inline-block;
+//     margin-right: 20px;
+//     padding: 0 5px;
+//     -webkit-transition: all .2s;
+//             transition: all .2s; }
+//     .room-menu li:hover {
+//       box-shadow: 0px 2px 0px 0px #be312a inset; }
+//     .room-menu li.active {
+//       box-shadow: 0px 2px 0px 0px #be312a inset; }
+//       .room-menu li.active a {
+//         color: #be312a; }
+//     .room-menu li a {
+//       font-size: 14px;
+//       color: #31313f;
+//       text-decoration: none;
+//       font-family: Open Sans, Arial;
+//       font-weight: 600;
+//       line-height: 94px;
+//       -webkit-transition: all .2s;
+//               transition: all .2s; }
+
+// .room-tabs {
+//   height: 445px;
+//   overflow: hidden;
+//   position: relative; }
+//   .room-tabs .room {
+//     height: 445px;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     opacity: 0;
+//     -webkit-transition: all .2s;
+//             transition: all .2s;
+//     background-position: center;
+//   background-size: cover;}
+//     .room-tabs .room h3 {
+//       font-family: 'corpid-bold', Arial;
+//       font-size: 32px;
+//       line-height: 38px;
+//       font-weight: normal;
+//       margin-top: 118px;
+//       text-align: center;
+//       color: #fff; }
+//     .room-tabs .room p {
+//       text-align: center;
+//       font-family: Open Sans, Arial;
+//       font-size: 15px;
+//       line-height: 22px;
+//       color: #fff;
+//       max-width: 924px;
+//       margin: 0 auto; }
+//     .room-tabs .room.active {
+//       opacity: 1; }
+//     .room-tabs .room.kitchen {
+//       background-image: url("/assets/bg-tab-kitchen.jpg"); }
+//     .room-tabs .room.sittingroom {
+//       background-image: url("/assets/bg-tab-sittingroom.jpg"); }
+//     .room-tabs .room.bedroom {
+//       background-image: url("/assets/bg-tab-bedroom.jpg"); }
+//     .room-tabs .room.bathroom {
+//       background-image: url("/assets/bg-tab-bathroom.jpg"); }
+//     .room-tabs .room.hall {
+//       background-image: url("/assets/bg-tab-hall.jpg"); }
+//     .room-tabs .room.childrens-room {
+//       background-image: url("/assets/bg-tab-childrens-room.jpg"); }
+
+// .repairs-menu {
+//   display: block;
+//   margin: 0 0 100px 0;
+//   padding: 0 42px 0 54px;
+//   max-width: 750px; }
+//   .repairs-menu:before {
+//     content: '';
+//     display: block;
+//     position: absolute;
+//     width: 100%;
+//     height: 0px;
+//     background-color: #fff;
+//     left: 0;
+//     right: 0;
+//     margin-top: 101px;
+//     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+//     height: 10px; }
+//   .repairs-menu li {
+//     display: inline-block;
+//     margin-right: 30px;
+//     margin-bottom: 3px;
+//     padding: 0 5px;
+//     -webkit-transition: all .2s;
+//             transition: all .2s; }
+//     .repairs-menu li:hover {
+//       box-shadow: 0px 2px 0px 0px #be312a inset; }
+//     .repairs-menu li.active {
+//       box-shadow: 0px 2px 0px 0px #be312a inset; }
+//       .repairs-menu li.active a {
+//         color: #be312a; }
+//     .repairs-menu li a {
+//       font-size: 14px;
+//       color: #31313f;
+//       text-decoration: none;
+//       font-family: Open Sans, Arial;
+//       font-weight: 600;
+//       line-height: 38px; }
+//     .repairs-menu li.add-new a {
+//       color: #a7a7b7; }
+
+
+
+// .toolbar {
+//   height: 80px;
+//   margin: 0 0 75px 0;
+//   list-style: none;
+//   padding: 0;
+//   text-align: center; }
+//   .toolbar li {
+//     display: inline-block;
+//     height: 70px;
+//     margin-right: 85px;
+//     font-size: 40px;
+//     text-align: center;
+//     color: #000;
+//     vertical-align: top;
+//   cursor: pointer;}
+//     .toolbar li i:before {
+//       font-style: normal;
+//       font-family: 'icomoon'; }
+//     .toolbar li.save i:before {
+//       content: "\e909";
+//       font-size: 37px; }
+//     .toolbar li.print i:before {
+//       content: "\e90a";
+//       font-size: 41px; }
+//     .toolbar li.share i:before {
+//       content: "\e908"; }
+//     .toolbar li p {
+//       font-size: 14px;
+//       line-height: 17px;
+//       font-weight: 600; }
+//     .toolbar li:hover {
+//       color: #e30613; }
+//     .toolbar li:last-child {
+//       margin-right: 0; }
+
+// .articles-list {
+//   max-width: 985px;
+//   list-style: none;
+//   display: block;
+//   margin: 0;
+//   padding: 0;
+//   margin: 0 auto 30px;}
+
+//   .articles-list .article {
+//     width: 315px;
+//     min-height: 0px;
+//     height: 0;
+//     margin: 5px;
+//     display: none;
+//     background-color: #fff;
+//     text-align: left;
+//     vertical-align: top;
+//     opacity: 0;
+//     -webkit-transition: all .2s;
+//             transition: all .2s; }
+//     .articles-list .article.visible {
+//       opacity: 1;
+//       height: 370px;
+//       min-height: 0px;
+//     display: inline-block;}
+//     .articles-list .article a {
+//       display: block;
+//       text-decoration: none; }
+//       .articles-list .article a:hover p {
+//         color: #e30613; }
+//       .articles-list .article a .article-img {
+//         height: 207px;
+//         background-repeat: no-repeat;
+//         background-position: center;
+//         background-size: cover;
+//         margin-bottom: 25px; }
+//       .articles-list .article a .category {
+//         font-size: 12px;
+//         color: #858594;
+//         margin: 0px 30px 13px 30px;
+//         display: block; }
+//       .articles-list .article a .descrition {
+//         font-size: 16px;
+//         line-height: 27px;
+//         color: #313140;
+//         font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+//         margin: 0px 30px 0 30px; }
+
+// .show-more {
+//   display: block;
+//   width: 136px;
+//   height: 45px;
+//   text-align: center;
+//   line-height: 45px;
+//   color: #e30611;
+//   border: 2px solid #e30611;
+//   background-color: transparent;
+//   -webkit-transition: all .2s;
+//           transition: all .2s;
+//   text-decoration: none;
+//   margin: 0 auto 35px;
+//   position: relative;
+//   z-index: 10; }
+//   .show-more:hover {
+//     color: #fff;
+//     background-color: #e30611; }
+
+// footer {
+//   height: 120px; }
+//   footer .content {
+//     height: 120px;
+//     background-repeat: no-repeat;
+//     background-position: left center; }
+//     footer .content .mts-logo {
+//       margin-top: 40px;
+//       float: left;
+//       width: 122px;
+//       height: 43px;
+//       margin-right: 40px;
+//       display: block;
+//       text-decoration: none;
+//       background-image: url("/assets/logo-footer-mts.png");}
+//     footer .content .mgts-logo {
+//       margin-top: 40px;
+//       float: left;
+//       width: 139px;
+//       height: 43px;
+//       display: block;
+//       text-decoration: none;
+//       background-image: url("/assets/logo-footer-mgts.png");}
+//     footer .content .ya-share2 {
+//       float: right;
+//       margin: 50px 35px 0 0; }
+//       footer .content .ya-share2 .ya-share2__badge {
+//         height: 33px; }
+//         footer .content .ya-share2 .ya-share2__badge .ya-share2__counter {
+//           font-size: 15px;
+//           padding: 8px 12px 0 12px; }
+//           footer .content .ya-share2 .ya-share2__badge .ya-share2__counter:before {
+//             margin-left: -9px; }
+//         footer .content .ya-share2 .ya-share2__badge .ya-share2__icon {
+//           margin-top: 4px;
+//           padding: 0 4px;
+//           background-position: center; }
+
+// .print-page {
+//   display: none;
+//   position: absolute;
+//   width: 100%;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   background-color: #fff;
+//   z-index: 100; }
+//   .print-page .content-wrapper {
+//     margin: 0 auto; }
+//     .print-page .content-wrapper .print-head {
+//       width: 100%;
+//       overflow: hidden;
+//       position: relative;
+//       color: #fff; }
+//       .print-page .content-wrapper .print-head h3 {
+//         color: #000;
+//         font-size: 35px;
+//         font-family: Open Sans, Arial;
+//         position: relative;
+//         z-index: 1;
+//         text-align: center; }
+//       .print-page .content-wrapper .print-head p {
+//         text-align: center;
+//         font-size: 16px;
+//         font-weight: bold;
+//         font-size: 15px;
+//         color: #000;
+//         font-family: Open Sans, Arial;
+//         position: relative;
+//         z-index: 1; }
+//     .print-page .content-wrapper .print-content .print-room {
+//       font-size: 32px;
+//       margin: 30px 0 10px 0;
+//       font-family: Open Sans, Arial; }
+//     .print-page .content-wrapper .print-content .print-type {
+//       margin-left: 50px;
+//       font-size: 16px;
+//       font-weight: 600;
+//       font-family: Open Sans, Arial; }
+//     .print-page .content-wrapper .print-content .print-option {
+//       font-size: 16px;
+//       padding-top: 0;
+//       font-family: Open Sans, Arial; }
+//       .print-page .content-wrapper .print-content .print-option .check-list {
+//         display: inline-block;
+//         width: 15px;
+//         height: 15px;
+//         border: 1px solid #888888;
+//         border-radius: 0;
+//         top: 2px;
+//         margin: 0 30px 0 0;
+//         background-color: #fff; }
+
+// /*#articles-wrapper {
+//   display: none;
+// }*/
+
+// .mail-form-holder {
+//   position: fixed;
+//   width: 100%;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   pointer-events: none;
+//   opacity: 0;
+//   height: 0;
+//   overflow: hidden;
+//   -webkit-transition: all .5s;
+//           transition: all .5s;
+//   background-color: rgba(255, 255, 255, 0.8); }
+//   .mail-form-holder.active {
+//     height: 100%;
+//     opacity: 1;
+//     pointer-events: all; }
+//   .mail-form-holder .verticalizer {
+//     display: inline-block;
+//     position: relative;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     height: 100%;
+//     width: 0px;
+//     vertical-align: middle; }
+//   .mail-form-holder .form-wraper {
+//     display: inline-block;
+//     position: relative;
+//     vertical-align: middle;
+//     width: 625px;
+//     height: 365px;
+//     background-color: #fff;
+//     left: 50%;
+//     margin-left: -311px;
+//     box-shadow: 0px 0px 3px -1px;
+//     padding: 25px;
+//     box-sizing: border-box; }
+//     .mail-form-holder .form-wraper .close-form {
+//       display: block;
+//       position: absolute;
+//       top: 25px;
+//       right: 25px;
+//       width: 16px;
+//       height: 16px;
+//       background-image: url("/assets/close-cross.png");
+//       -webkit-transform: rotate(-180deg);
+//               transform: rotate(-180deg);
+//       -webkit-transition: all .5s;
+//               transition: all .5s;
+//       cursor: pointer;
+//       z-index: 200; }
+//       .mail-form-holder .form-wraper .close-form:hover {
+//         -webkit-transform: rotate(0deg);
+//                 transform: rotate(0deg); }
+//     .mail-form-holder .form-wraper .success-mail, .mail-form-holder .form-wraper .error-mail {
+//       position: absolute;
+//       width: 100%;
+//       height: 0;
+//       opacity: 0;
+//       overflow: hidden;
+//       top: 0;
+//       left: 0;
+//       z-index: 150;
+//       background-color: #fff;
+//       -webkit-transition: all .2s;
+//               transition: all .2s; }
+//       .mail-form-holder .form-wraper .success-mail p.head, .mail-form-holder .form-wraper .error-mail p.head {
+//         font-size: 14px;
+//         margin-top: 130px;
+//         color: #e30611;
+//         text-align: center; }
+//       .mail-form-holder .form-wraper .success-mail p.text, .mail-form-holder .form-wraper .error-mail p.text {
+//         font-size: 14px;
+//         text-align: center;
+//         line-height: 21px; }
+//       .mail-form-holder .form-wraper .success-mail.active, .mail-form-holder .form-wraper .error-mail.active {
+//         height: 100%;
+//         opacity: 1; }
+//     .mail-form-holder .form-wraper p.head {
+//       font-size: 14px;
+//       line-height: 21px;
+//       font-weight: 600;
+//       text-align: center;
+//       margin-top: 80px; }
+//     .mail-form-holder .form-wraper form.send-mail .input-holder {
+//       width: 250px;
+//       margin: 0 auto;
+//       position: relative; }
+//       .mail-form-holder .form-wraper form.send-mail .input-holder input {
+//         width: 100%;
+//         line-height: 30px;
+//         text-align: center;
+//         border: 0;
+//         border-bottom: 2px #d9d9d9 solid;
+//         font-size: 13px;
+//         margin-bottom: 37px; }
+//         .mail-form-holder .form-wraper form.send-mail .input-holder input.error {
+//           border-bottom: 2px #e30611 solid;
+//           color: #e30611; }
+//       .mail-form-holder .form-wraper form.send-mail .input-holder label {
+//         position: absolute;
+//         font-size: 13px;
+//         bottom: 13px;
+//         width: 100%;
+//         text-align: center;
+//         color: #e30611; }
+//     .mail-form-holder .form-wraper button {
+//       display: block;
+//       width: 115px;
+//       height: 40px;
+//       margin: 0 auto;
+//       line-height: 33px;
+//       background-color: none;
+//       font-size: 14px;
+//       color: #e30611;
+//       border: 2px #e30611 solid;
+//       background-color: transparent;
+//       -webkit-transition: all .5s;
+//               transition: all .5s; }
+//       .mail-form-holder .form-wraper button.disabled {
+//         border: 2px #a2a2a2 solid;
+//         color: #a2a2a2;
+//         pointer-events: none; }
+
+// @media print {
+//   .header, .footer {
+//     display: none; }
+//   header, .content-wrapper {
+//     display: none; }
+//   .print-page {
+//     display: block; }
+//     .print-page .content-wrapper {
+//       display: block; } }
+// @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+//    .flat-plan .room.hall {
+//       background-position: -20px 27px;
+//       background-size: 159px;
+//       }
+//     .flat-plan .room.childrens-room {
+//       right: 2px;
+//       }
+//     .flat-plan .room.bathroom {
+//       left: -7px;
+//       }
+//     .flat-plan .room.kitchen {
+//       left: 180px;
+//       background-size: 281px; }
+//     .mail-form-holder .form-wraper form.send-mail .input-holder input {
+//       font-size:18px;
+//     }
+//   .content-wrapper .content .planing-block .repairs-tabs .repairs-tab form .form-row input.checkbox:before, .content-wrapper .content .planing-block .repairs-tabs .repairs-tab form .form-row input.checkbox:after {
+//     content: "";
+//     display: none !important;
+//   }
+
+//   .content-wrapper .content .planing-block .repairs-tabs .repairs-tab form .form-row input.checkbox{
+//     width: auto;
+//     height: auto;
+//     background: inherit;
+//     content: "";
+//     pointer-events: all;
+//   }
+// }

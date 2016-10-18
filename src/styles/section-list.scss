@@ -1,0 +1,64 @@
+.section-list {
+  display: inline-block;
+  margin: 125px 0 0 50px;
+  width: 272px;
+
+  li {
+    position: relative;
+    margin-bottom: 30px;
+
+    .title {
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .desc {
+      margin: 10px 0 0;
+      font-size: 13px;
+      letter-spacing: 1px;
+      line-height: 20px;
+      color: #333333;
+    }
+
+    &:before {
+      display: block;
+      position: absolute;
+      top: -2px;
+      left: -50px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    &:first-child:before {
+      content: "01";
+    }
+
+    &:nth-child(2):before {
+      content: "02";
+    }
+
+    &:nth-child(3):before {
+      content: "03";
+    }
+
+    &:last-child:before {
+      content: "04";
+    }
+
+    &.is-active {
+      &:before {
+        color: #e5242c;
+      }
+
+      &:after {
+        display: block;
+        position: absolute;
+        content: "—";
+        top: -4px;
+        left: -26px;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+}
