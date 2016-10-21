@@ -11,7 +11,13 @@
     -webkit-transition: all .5s;
             transition: all .5s;
     cursor: pointer;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+
+    &.is-active {
+      opacity: 1;
+    }
+
+     }
     .flat-plan .room:hover {
       opacity: 1; }
       .flat-plan .room:hover span {

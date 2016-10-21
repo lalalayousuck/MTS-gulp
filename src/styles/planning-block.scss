@@ -1,28 +1,49 @@
 .planing-block {
   position: relative;
-  min-height: 300px; 
+  min-height: 500px;
+  transition: all 0.2s;
 }
 
 .repairs-tabs {
   overflow: hidden;
-  min-height: 500px;
   min-width: 100%;
   height: 100%;
   margin-bottom: 125px;
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}
+
+.repairs-tab {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}
+
+.paragraph-toggler {
+  border-bottom: 2px dashed #888888;
+  cursor: pointer;
 }
 
 .form-row {
+  position: relative;
   margin-bottom: 23px;
 
   .repairs-tab_desc {
+    display: none;
+
     margin: 11px 0 0 37px;
     width: 500px;
     font-size: 14px;
     line-height: 18px;
     color: #888888;
 
-    span {
-      text-decoration: underline dashed;
+    &.is-visible {
+      display: block;
     }
 
     a {
@@ -34,8 +55,18 @@
   p,
   input.text {
     font-size: 16px;
-    line-height: 16px;
+    line-height: 22px;
     letter-spacing: 0.5px;
+    vertical-align: top;
+  }
+
+  p {
+    padding-left: 40px;
+    transition: all 0.2s;
+
+    &:hover {
+      color: #e5242c;
+    }
   }
 
   .plus {
@@ -63,8 +94,8 @@
   }
 
   .checkbox {
-    position: relative;
-    float: left;
+    position: absolute;
+    top: 3px;
     display: inline-block;
     margin: 0 12px 0 10px;
     width: 16px;
@@ -109,137 +140,26 @@
 
 .planning-block_actions {
   margin: 45px 0 0;
+  text-align: left;
 
-  .btn {
-    position: relative;
-    display: inline-block;
-    background-color: transparent;
-    border: none;
-    font-size: 12px;
-    text-transform: uppercase;
-    outline: none;
+  .btn_save {
+    background-color: #e20611;
+    margin-right: 20px;
 
     &:before {
-      position: absolute;
-      top: -1px;
-      left: -33px;
-      content: "";
-    }
-
-    &:first-child {
-      margin: 0 100px 0 42px;
-    }
-
-    &:last-child {
-      margin: 0 0 0 85px;
+      @include icon(btn_save)
+      top: 6px;
+      left: 6px;
     }
   }
 
-  .btn_save:before {
-    @include icon(btn_save);
-  }
+  .btn_print {
+    background-color: #515151;
 
-  .btn_print:before {
-    @include icon(btn_print);
-  }
-
-  .btn_share:before {
-    @include icon(btn_share);
+    &:before {
+      @include icon(btn_print)
+      top: 7px;
+      left: 7px;
+    }
   }
 }
-
-
-//   .repairs-tabs.active {
-//     opacity: 1;
-//     pointer-events: all;
-//   display: block}
-//   .repairs-tabs .repairs-tab {
-//     width: 100%;
-//     opacity: 1;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     pointer-events: none;
-//     -webkit-transition: all .2s;
-//             transition: all .2s; }
-//     .repairs-tabs .repairs-tab form {
-//       clear: both;
-//       width: 100%;
-//       padding: 0 65px 0 90px; }
-//       .repairs-tabs .repairs-tab form .col-left, .repairs-tabs .repairs-tab form .col-right {
-//         float: left;
-//         width: 50%; }
-//       .repairs-tabs .repairs-tab form .form-row {
-//         clear: both;
-//         margin-bottom: 23px; }
-//         .repairs-tabs .repairs-tab form .form-row input.checkbox {
-//           position: relative;
-//           width: 17px;
-//           height: 17px;
-//           border-radius: 0;
-//           float: left;
-//           outline: none; }
-//           .repairs-tabs input.checkbox:before {
-//             content: '';
-//             position: absolute;
-//             display: block;
-//             width: 15px;
-//             height: 15px;
-//             border: 1px solid #888888;
-//             border-radius: 0;
-//             box-shadow: none;
-//             background-color: #fff;
-//             pointer-events: none; }
-//           .repairs-tabs input.checkbox:after {
-//             content: '';
-//             position: absolute;
-//             display: block;
-//             top: 1px;
-//             left: 1px;
-//             width: 15px;
-//             height: 15px;
-//             pointer-events: none;
-//             opacity: 0;
-//             -webkit-transition: all .2s;
-//                     transition: all .2s;
-//             background-image: url("/assets/check.png");
-//             background-position: center;
-//             background-repeat: no-repeat;
-//             }
-//           .repairs-tabs .repairs-tab form .form-row input.checkbox:checked:after {
-//             opacity: 1; }
-//         .repairs-tabs .repairs-tab form .form-row input.text {
-//           border: 0;
-//           width: 80%;
-//           margin-left: 17px;
-//           outline: none;
-//       font-size: 14px;}
-//         .repairs-tabs .repairs-tab form .form-row p {
-//           margin-left: 34px;
-//           font-size: 14px;
-//           line-height: 21px;
-//           -webkit-transition: all .2s;
-//                   transition: all .2s; }
-//           .repairs-tabs .repairs-tab form .form-row p:hover {
-//             color: #e30613; }
-//           .repairs-tabs .repairs-tab form .form-row p.paragraph-description {
-//             height: 0;
-//             overflow: hidden;
-//             font-size: 14px;
-//             line-height: 22px;
-//             margin-left: 35px;
-//             max-width: 395px; }
-//             .repairs-tabs .repairs-tab form .form-row p.paragraph-description:hover {
-//               color: #31313f; }
-//             .repairs-tabs .repairs-tab form .form-row p.paragraph-description.shown {
-//               height: auto; }
-//             .repairs-tabs .repairs-tab form .form-row p.paragraph-description a {
-//               color: #e30613; }
-//           .repairs-tabs .repairs-tab form .form-row p .paragraph-toggler {
-//             cursor: pointer;
-//             padding-bottom: 3px;
-//             border-bottom: 2px dashed #b4b4b4; }
-//     .repairs-tabs .repairs-tab.active {
-//       opacity: 1;
-//       pointer-events: all;
-//     display: block;}

@@ -12,6 +12,12 @@
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 200;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      color: #e5242c;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -19,6 +25,11 @@
 
     &.is-active {
       border: 1px solid #e5242c;
+
+      &:hover {
+        cursor: default;
+        color: black;
+      }
     }
   }
 }

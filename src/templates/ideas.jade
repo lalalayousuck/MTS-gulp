@@ -1,0 +1,7 @@
+each post in posts
+  a.post-preview(href=post.url)
+    .post-preview_pic
+      img(src=post.image)
+    .post-preview_info  
+      .post-preview_tag= post.category
+      .post-preview_title= post.title

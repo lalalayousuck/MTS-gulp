@@ -21,6 +21,8 @@
     font-weight: 700;
     padding: 0 15px 15px;
     z-index: +2;
+    cursor: pointer;
+    transition: 0.2s all;
     
     &.is-active {
       border-bottom: 2px solid #e5242c;

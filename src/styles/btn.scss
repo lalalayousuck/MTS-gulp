@@ -1,0 +1,57 @@
+@mixin core-btn {
+  display: inline-block;
+  border: 1px solid transparent;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  user-select: none;
+  text-decoration: none;
+  vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  touch-action: manipulation;
+  appearance: none;
+  text-decoration: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+%btn-base {
+  @include core-btn;
+  padding: 6px 15px 8px;
+  border-radius: 4px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  text-transform: none;
+  font-weight: 400;
+  transition: 0.2s background, 0.2s box-shadow;
+
+  @include lp(320) {
+    width: 100%;
+  }
+}
+
+.btn {
+  @extend %btn-base;
+  position: relative;
+  padding: 0 15px 0 30px;
+  border: 1px solid #454545;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  line-height: 24px;
+  height: 26px;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: none;
+  color: white;
+  font-weight: 400;
+  transition: 0.2s background, 0.2s box-shadow;
+
+  &:before {
+    position: absolute;
+    left: 3px;
+    top: 30px;
+  }
+}

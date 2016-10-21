@@ -28,20 +28,7 @@
     }
 
     &:last-child {
-      position: relative;
       float: right;
-      margin: 3px 146px 0 0;
-      font-size: 11px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: #858c89;
-
-      &:after {
-        @include icon(mts-logo__header);
-        position: absolute;
-        top: 21px;
-        right: -106px;
-      }
     }
   }    
 }

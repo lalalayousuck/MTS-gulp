@@ -13,7 +13,7 @@ var browserify = require('browserify');
 var spritesmith = require('gulp.spritesmith');
 var merge = require('merge-stream');
 var sourcemaps = require('gulp-sourcemaps');
-// var GulpSSH = require('gulp-ssh')
+var GulpSSH = require('gulp-ssh')
 var fs = require('fs');
 var uglify = require('gulp-uglify');
 var autoprefixer = require('gulp-autoprefixer');
@@ -108,22 +108,22 @@ gulp.task('templates', function() {
     .pipe(gulp.dest('./build/assets'))
 });
 
-// var gulpSSH = new GulpSSH({
-//   ignoreErrors: false,
-//   sshConfig: {
-//     host: 'hw01.improvemedia.ru',
-//     port: 2233,
-//     username: 'inmyroom',
-//     privateKey: fs.readFileSync('/Users/user/.ssh/id_rsa')
-//   }
-// })
+var gulpSSH = new GulpSSH({
+  ignoreErrors: false,
+  sshConfig: {
+    host: 'hw01.improvemedia.ru',
+    port: 2233,
+    username: 'inmyroom',
+    privateKey: fs.readFileSync('/Users/headonfire/headonfire/.ssh/id_rsa')
+  }
+})
 
-// gulp.task('deploy', function() {
-//   runSequence('clean', 'build', 'productionJS', 'productionCSS', 'productionIMG', 'gzip', function() {
-//     gulp.src('./build/**')
-//       .pipe(gulpSSH.dest('/srv/remontsvtb24.inmyroom.ru'))
-//   })
-// })
+gulp.task('deploy', function() {
+  runSequence('clean', 'build', 'productionJS', 'productionCSS', 'productionIMG', 'gzip', function() {
+    gulp.src('./build/**')
+      .pipe(gulpSSH.dest('/srv/promostaging.inmyroom.ru'))
+  })
+})
 
 gulp.task('productionJS', function() {
   gulp.src('./build/**/*.js')

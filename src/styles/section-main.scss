@@ -1,7 +1,7 @@
 .section-main {
   // position: relative;
   margin-top: -76px;
-  min-height: 890px;
+  min-height: 100vh;
   padding-top: 150px;
   background-image: url("/assets/grey-brush-main2.png"), linear-gradient(90deg, #c6e2e9, #edf4ec);
   background-position: center bottom;
@@ -70,8 +70,10 @@
 }
 
 .section-main_down {
-  position: relative;
-  margin: 220px auto 0;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  margin-left: -52px;
   width: 104px;
   font-size: 13px;
   text-align: center;
