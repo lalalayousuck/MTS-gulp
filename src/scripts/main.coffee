@@ -8,11 +8,11 @@ data = require('./data/posts')
 require('./lib/component')
 require('./components/share-btn')
 require('./components/custom')
-
+require('./components/todo-list')
 
 
 attachFastClick(document.body)
-$(document).ready -> 
+$(document).ready ->
 
   Component.vitalize()
 

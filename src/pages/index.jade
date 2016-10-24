@@ -130,7 +130,7 @@ html.no-js(lang='')
               li
                 a.title(href="#tech") УМНЫЕ ТЕХНОЛОГИИ
 
-          .col.col-right
+          .col.col-right(data-component='todoList')
             ul.repairs-menu
               li.is-active(data-repair='Планирование') Планирование
               li(data-repair='Черновые работы') Черновые работы
@@ -1278,8 +1278,8 @@ html.no-js(lang='')
                       input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
 
             .planning-block_actions                 
-              .btn.btn_save Скачать
-              .btn.btn_print Печать
+              .btn.btn_save.js-todoListDownload Скачать
+              .btn.btn_print.js-todoListPrint Печать
               br
               .share-btn.share-btn__fb(data-component='shareBtn', data-title=title, data-description=description, data-type="fb", data-url=url, data-image=image)
                 | Share
