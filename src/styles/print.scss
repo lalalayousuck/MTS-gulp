@@ -5,18 +5,25 @@
     display: block !important;
   }  
 
+  .repairs-tabs {
+    margin-bottom: 0;
+    padding-left: 50px;
+  }
+
   .repairs-tabs.is-checked h1 {
     display: block;
     font-size: 18px;
     line-height: 24px;
-    margin: 15px 0 15px 5px;
+    font-weight: 700;
+    margin: 15px 0 15px 8px;
   }
 
   .repairs-tab.is-checked h2 {
     display: block;
     font-size: 15px;
     line-height: 20px;
-    margin: 15px 0 15px 5px;
+    font-weight: 600;
+    margin: 15px 0 15px 8px;
   }
 
   .section-tech,
@@ -36,6 +43,10 @@
   .form-row:not(.is-checked),
   .section_desc {
     display: none;
+  }
+
+  .section_infoblock.section-main_infoblock {
+    padding: 45px 0 0 8px;
   }
 
   .section-main {
