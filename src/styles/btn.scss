@@ -36,13 +36,12 @@
 .btn {
   @extend %btn-base;
   position: relative;
-  padding: 0 15px 0 30px;
-  border: 1px solid #454545;
+  padding: 0 18px 0 30px;
   margin-bottom: 20px;
   border-radius: 4px;
-  line-height: 24px;
-  height: 26px;
-  font-size: 14px;
+  line-height: 27px;
+  height: 30px;
+  font-size: 16px;
   cursor: pointer;
   text-transform: none;
   color: white;

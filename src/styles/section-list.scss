@@ -1,6 +1,6 @@
 .section-list {
   display: inline-block;
-  margin: 125px 0 0 50px;
+  margin-left: 50px;
   width: 272px;
 
   li {
@@ -10,6 +10,14 @@
     .title {
       font-size: 17px;
       font-weight: 700;
+    }
+
+    a.title {
+      transition: color 0.2s;
+
+      &:hover {
+        color: #e5242c;
+      }
     }
 
     .desc {
@@ -45,7 +53,7 @@
       content: "04";
     }
 
-    &.is-active {
+    &.is-current {
       &:before {
         color: #e5242c;
       }
@@ -61,4 +69,20 @@
       }
     }
   }
+}
+
+.section-tech .section-list {
+  margin-top: 40%;
+}
+
+.section-flat-plan .section-list {
+  margin-top: 125px;
+}
+
+.section-room .section-list {
+  margin-top: 60px;
+}
+
+.section-ideas .section-list {
+  margin-top: 100px;
 }

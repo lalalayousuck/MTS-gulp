@@ -14,46 +14,47 @@ html.no-js(lang='')
     link(rel="stylesheet" href="/assets/main.css")
     link(href='./assets/favicon.png', rel='shortcut icon', type='image/vnd.microsoft.icon')
   body
-    header.header
-      .container
-        ul
-          li
-            a(href='http://www.inmyroom.ru')
-              img(src="/assets/imr-logo.png")
-          li
-            a(href='http://www.inmyroom.ru/my/feed') Моя лента
-          li
-            a(href='http://www.inmyroom.ru/posts') Идеи
-          li
-            a(href='http://www.inmyroom.ru/products') Магазины
-          li
-            a(href='http://www.inmyroom.ru/photos') Фото
-          li
-            a(href='http://www.inmyroom.ru/discussions') Советы
-          li
-            a(href='http://www.inmyroom.ru/profi') Профи
-          li
-            img(src='/assets/mts_header_logo.png')
+    
     main
       section.section-main
         .container
+          header.header
+            .container
+              ul
+                li
+                  a(href='http://www.inmyroom.ru')
+                    img(src="/assets/imr-logo.png")
+                li
+                  a(href='http://www.inmyroom.ru/my/feed') Моя лента
+                li
+                  a(href='http://www.inmyroom.ru/posts') Идеи
+                li
+                  a(href='http://www.inmyroom.ru/products') Магазины
+                li
+                  a(href='http://www.inmyroom.ru/photos') Фото
+                li
+                  a(href='http://www.inmyroom.ru/discussions') Советы
+                li
+                  a(href='http://www.inmyroom.ru/profi') Профи
+                li
+                  img(src='/assets/mts_header_logo.png')
           .section_infoblock.section-main_infoblock
             .section_pretitle спецпроект
             h1 азбука ремонта
             .section_desc Хотите обновить интерьер и ждете впечатляющие результаты в короткие сроки? Чтобы ремонт не затягивался, важно предусмотреть всё. Воспользуйтесь списками дел и рекомендациями профессионалов.
           .section-main_down ЛИСТАЙТЕ ВНИЗ
-      section.section-flat-plan
+      section.section-flat-plan#rooms
         .container
           ul.section-list
-            li.is-active
+            li.is-current
               .title ВЫБОР КОМНАТЫ
               .desc Выберите комнату, в которой вы хотите сделать ремонт
             li
-              .title СПИСОК ДЕЛ
+              a.title(href="#tasklist") СПИСОК ДЕЛ
             li
-              .title ПОИСК ИДЕЙ
+              a.title(href="#ideas") ПОИСК ИДЕЙ
             li
-              .title УМНЫЕ ТЕХНОЛОГИИ
+              a.title(href="#tech") УМНЫЕ ТЕХНОЛОГИИ
           //- .flat-plan
           //-   .room.hall(onclick='ga("send", "event", "plan", "hall");', data-room='Прихожая')
           //-     span Прихожая
@@ -92,7 +93,7 @@ html.no-js(lang='')
             li.is-active(data-room='Прихожая') Прихожая
             li(data-room='Детская') Детская
               
-          .room-descriptions
+          .room-descriptions#tasklist
             .room-description(data-room='Кухня')
               img.section-room_desc(src="/assets/desc-kitchen.png")
               .section-room_desc-text Без сомнения, «сердце» дома – это его кухня, источник вкусной еды и манящих запахов, а также, в отсутствие столовой, место основного сбора всех домочадцев. Это помещение как никакое другое обязано сочетать в себе всё сразу – сложную технику и уютное пространство, зоны работы и отдыха, а также безопасность и комфорт каждого члена семьи.
@@ -120,14 +121,14 @@ html.no-js(lang='')
           .col.col-left
             ul.section-list
               li
-                .title ВЫБОР КОМНАТЫ
-              li.is-active
+                a.title(href="#rooms") ВЫБОР КОМНАТЫ
+              li.is-current
                 .title СПИСОК ДЕЛ
                 .desc Отметьте в списке, что вам может понадобиться при ремонте
               li
-                .title ПОИСК ИДЕЙ
+                a.title(href="#ideas") ПОИСК ИДЕЙ
               li
-                .title УМНЫЕ ТЕХНОЛОГИИ
+                a.title(href="#tech") УМНЫЕ ТЕХНОЛОГИИ
 
           .col.col-right
             ul.repairs-menu
@@ -162,9 +163,9 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Придумать систему хранения
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу' value= "")
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу' value= "")
 
 
                 .repairs-tab(data-repair='Черновые работы')
@@ -187,9 +188,9 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Монтаж трубы для вытяжки
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
 
 
                 .repairs-tab(data-repair='Инженерные коммуникации')
@@ -250,9 +251,9 @@ html.no-js(lang='')
                         |  позволяет следить за домом из любой точки мира
                         br
                         |  в режиме реального времени.
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
 
 
                 .repairs-tab(data-repair='Мебель и техника')
@@ -275,9 +276,9 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Кухонные столешницы и настенные модули для хранения
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
 
 
                 .repairs-tab(data-repair='Декор')
@@ -300,9 +301,9 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Держатель для вина
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
 
 
                 .repairs-tab(data-repair='Отделочные работы')
@@ -325,16 +326,16 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Покрытие пола
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
 
 
                 .repairs-tab(data-repair='Другая категория')
                   form
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
               .repairs-tabs(data-room='Гостиная')
                 .repairs-tab(data-repair='Планирование')
                   form
@@ -359,9 +360,9 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Продумать систему хранения 
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Черновые работы')
                   form
                     .form-row
@@ -379,9 +380,9 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Штукатурка стен по маякам 
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Инженерные коммуникации')
                   form
                     .form-row
@@ -456,9 +457,9 @@ html.no-js(lang='')
                         |  – один из самых надежных способов общения с близкими.
                         br
                         |  Красивый номер, межгород, цифровые функции.
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Мебель и техника')
                   form
                     .form-row
@@ -479,9 +480,9 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Кресла-мешки 
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Декор')
                   form
                     .form-row
@@ -502,9 +503,9 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Шторы 
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Отделочные работы')
                   form
                     .form-row
@@ -519,20 +520,20 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Оклейка стен обоями под окраску
-                    .form-row.new-checkbox
+                    .form-row.new-checkbox(data-component="custom")
                       input.checkbox(type='checkbox')
                       p Грунтовка и шпатлевка откосов 
-                    .form-row.new-checkbox
+                    .form-row.new-checkbox(data-component="custom")
                       input.checkbox(type='checkbox')
                       p Покрытие пола
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Другая категория')
                   form
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
               .repairs-tabs(data-room='Спальня')
                 .repairs-tab(data-repair='Планирование')
                   form
@@ -554,9 +555,9 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Продумать систему хранения 
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Черновые работы')
                   form
                     .form-row
@@ -575,8 +576,8 @@ html.no-js(lang='')
                       input.checkbox(type='checkbox')
                       p Штукатурка стен по маякам
                     .form-row
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Инженерные коммуникации')
                   form
                     .form-row
@@ -635,9 +636,9 @@ html.no-js(lang='')
                         |  – один из самых надежных способов общения с близкими.
                         br
                         |  Красивый номер, межгород, цифровые функции.
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Мебель и техника')
                   form
                     .form-row
@@ -658,9 +659,9 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Шкаф для одежды
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Декор')
                   form
                     .form-row
@@ -681,9 +682,9 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Мягкий ковер
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Отделочные работы')
                   form
                     .form-row
@@ -704,14 +705,14 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Покрытие пола
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Другая категория')
                   form
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
               .repairs-tabs(data-room='Ванная')
                 .repairs-tab(data-repair='Планирование')
                   form
@@ -733,9 +734,9 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Продумать систему хранения 
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Черновые работы')
                   form
                     .form-row
@@ -757,8 +758,8 @@ html.no-js(lang='')
                       input.checkbox(type='checkbox')
                       p Установки вентиляции
                     .form-row
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Инженерные коммуникации')
                   form
                     .form-row
@@ -777,8 +778,8 @@ html.no-js(lang='')
                       input.checkbox(type='checkbox')
                       p Установка кранов 
                     .form-row
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Мебель и техника')
                   form
                     .form-row
@@ -799,9 +800,9 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Держатель для фена
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Декор')
                   form
                     .form-row
@@ -819,9 +820,9 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Подставка для мыла и держатель для зубной пасты
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Отделочные работы')
                   form
                     .form-row
@@ -845,14 +846,14 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Укладка плитки на пол
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Другая категория')
                   form
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
               .repairs-tabs.is-active(data-room='Прихожая')
                 .repairs-tab.is-active(data-repair='Планирование')
                   form
@@ -877,14 +878,14 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Продумать систему хранения 
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Черновые работы')
                   form
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Инженерные коммуникации')
                   form
                     .form-row
@@ -962,9 +963,9 @@ html.no-js(lang='')
                         |  до 500 Мбит/с, цифровым ТВ с функциями управления эфиром и
                         br
                         |  Домашней Телефонией последнего поколения.
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Мебель и техника')
                   form
                     .form-row
@@ -985,9 +986,9 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Комод или консоль
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Декор')
                   form
                     .form-row
@@ -1005,9 +1006,9 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Ваза для зонтов
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Отделочные работы')
                   form
                     .form-row
@@ -1028,14 +1029,14 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Покрытие пола
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Другая категория')
                   form
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
               .repairs-tabs(data-room='Детская')
                 .repairs-tab(data-repair='Планирование')
                   form
@@ -1060,9 +1061,9 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Продумать безопасность
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Черновые работы')
                   form
                     .form-row
@@ -1084,8 +1085,8 @@ html.no-js(lang='')
                       input.checkbox(type='checkbox')
                       p Штукатурка стен по маякам 
                     .form-row
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Инженерные коммуникации')
                   form
                     .form-row
@@ -1103,9 +1104,9 @@ html.no-js(lang='')
                         | Продумать несколько видов освещения,
                         br
                         |  которые можно включать по отдельности
-                    .form-row.new-checkbox
+                    .form-row.new-checkbox(data-component="custom")
                       input.checkbox(type='checkbox')
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                     .form-row
                       input.checkbox(type='checkbox')
                       p
@@ -1166,9 +1167,9 @@ html.no-js(lang='')
                         |  – один из самых надежных способов общения с близкими.
                         br
                         |  Простой красивый номер, удобное использование!
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Мебель и техника')
                   form
                     .form-row
@@ -1189,9 +1190,9 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Кровать
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Декор')
                   form
                     .form-row
@@ -1209,9 +1210,9 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Подвесной светильник
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Отделочные работы')
                   form
                     .form-row
@@ -1232,14 +1233,14 @@ html.no-js(lang='')
                     .form-row
                       input.checkbox(type='checkbox')
                       p Покрытие пола
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
                 .repairs-tab(data-repair='Другая категория')
                   form
-                    .form-row.new-checkbox
-                      .plus
-                      input.text(type='text', placeholder='Добавьте свою задачу')
+                    .form-row.new-checkbox(data-component="custom")
+                      .plus.js-customPlus
+                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
 
             .planning-block_actions                 
               .btn.btn_save Скачать
@@ -1260,57 +1261,30 @@ html.no-js(lang='')
           .col.col-left
             ul.section-list
               li
-                .title ВЫБОР КОМНАТЫ
+                a.title(href="#rooms") ВЫБОР КОМНАТЫ
               li
-                .title СПИСОК ДЕЛ
-              li.is-active
+                a.title(href="#tasklist") СПИСОК ДЕЛ
+              li.is-current
                 .title ПОИСК ИДЕЙ
                 .desc Вдохновляйтесь идеями ремонта и полезными советами
               li
-                .title УМНЫЕ ТЕХНОЛОГИИ
+                a.title(href="#tech") УМНЫЕ ТЕХНОЛОГИИ
           .col.col-right#ideas
-            
-            a.post-preview(href='https://www.inmyroom.ru/posts/13545-odnushka-s-betonnymi-stenami-i-vannoj-v-spalne')
-              .post-preview_pic
-                img(src='https://cdn.inmyroom.ru/uploads/post/teaser/69/694d/m_694df1f6-4536-4a71-84f5-afd9470eff8d.jpg')
-              .post-preview_info  
-                .post-preview_tag Советы
-                .post-preview_title Однушка с бетонными стенами и ванной в спальне
 
-            a.post-preview(href='https://www.inmyroom.ru/posts/13545-odnushka-s-betonnymi-stenami-i-vannoj-v-spalne')
-              .post-preview_pic
-                img(src='https://cdn.inmyroom.ru/uploads/post/teaser/69/694d/m_694df1f6-4536-4a71-84f5-afd9470eff8d.jpg')
-              .post-preview_info  
-                .post-preview_tag Советы
-                .post-preview_title Однушка с бетонными стенами и ванной в спальне
 
-            a.post-preview(href='https://www.inmyroom.ru/posts/13545-odnushka-s-betonnymi-stenami-i-vannoj-v-spalne')
-              .post-preview_pic
-                img(src='https://cdn.inmyroom.ru/uploads/post/teaser/69/694d/m_694df1f6-4536-4a71-84f5-afd9470eff8d.jpg')
-              .post-preview_info  
-                .post-preview_tag Советы
-                .post-preview_title Однушка с бетонными стенами и ванной в спальне
-
-            a.post-preview(href='https://www.inmyroom.ru/posts/13545-odnushka-s-betonnymi-stenami-i-vannoj-v-spalne')
-              .post-preview_pic
-                img(src='https://cdn.inmyroom.ru/uploads/post/teaser/69/694d/m_694df1f6-4536-4a71-84f5-afd9470eff8d.jpg')
-              .post-preview_info  
-                .post-preview_tag Советы
-                .post-preview_title Однушка с бетонными стенами и ванной в спальне
-
-      section.section-tech
+      section.section-tech#tech
         .section-tech_gradient
           .container
             .col.col-left
               ul.section-list
                 li
-                  .title ВЫБОР КОМНАТЫ
+                  a.title(href="#rooms") ВЫБОР КОМНАТЫ
                 li
-                  .title СПИСОК ДЕЛ
+                  a.title(href="#tasklist") СПИСОК ДЕЛ
                 li
-                  .title ПОИСК ИДЕЙ
+                  a.title(href="#ideas") ПОИСК ИДЕЙ
                   
-                li.is-active
+                li.is-current
                   .title УМНЫЕ ТЕХНОЛОГИИ
                   .desc Узнайте все о преимуществах GPON
 
@@ -1318,11 +1292,13 @@ html.no-js(lang='')
               h1 гид по gpon
               h2 Умные технологии для вашего дома
 
-        section.section-gpon
-          .container
-            .section-gpon_title GPON - оптика до квартиры
-            a(href="#")
-              img(src="/assets/logo-mgts.png")
+      section.section-gpon
+        .container
+          .section-gpon_title GPON - оптика до квартиры
+          a(href="#")
+            img(src="/assets/logo-mgts.png")
+
+                
 
 
     script(src='/assets/templates.js')

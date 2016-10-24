@@ -6,11 +6,15 @@ attachFastClick = require('fastclick')
 data = require('./data/posts')
 
 require('./lib/component')
+require('./components/share-btn')
+require('./components/custom')
+
+
 
 attachFastClick(document.body)
 $(document).ready -> 
 
-
+  Component.vitalize()
 
   currentRoom = "Прихожая"
   room = data.room5
@@ -30,20 +34,16 @@ $(document).ready ->
       when "Детская" then room = data.room6
       else data = data.room5
 
-
-
   addActive = (currentRoom) ->
     $('[data-room = "' + currentRoom + '"]').addClass('is-active')
     $('[data-room = "' + currentRoom + '"] > [data-repair="Планирование"]').addClass('is-active')
     $('.repairs-menu li[data-repair="Планирование"]').addClass('is-active')
 
   setRoom = () ->
-
     $('.is-active').removeClass('is-active')
     addActive(currentRoom)
     setRoomData(currentRoom)
     renderPosts(room)
-
 
   $('.room').click ->
     currentRoom = $(@).attr('data-room')
@@ -59,12 +59,8 @@ $(document).ready ->
     $('.repairs-tab').removeClass('is-active')
     $('.repairs-tabs[data-room = "' + currentRoom + '"] .repairs-tab[data-repair = "' + $(@).attr('data-repair') + '"]').addClass('is-active')
 
-  # $('.paragraph-toggler').click ->
-  #   console.log $(@).closest('.repairs-tab_desc')
-  #   $(@).parent()closest('repairs-tab_desc').addClass('is-visible')
+  $('.paragraph-toggler').click ->
+    $(@).parent().parent().find('.repairs-tab_desc').toggleClass('is-visible')
 
 
-  # renderPosts(currentRoom)
 
-  
-  

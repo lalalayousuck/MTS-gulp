@@ -30,18 +30,18 @@ Component.define 'shareBtn',
       params =
         app_id: 239854476109563
         display: 'popup'
-        link: url
-        redirect_uri: redirectUrl
+        link: 'http://promostaging.inmyroom.ru'
+        redirect_uri: 'http://promostaging.inmyroom.ru'
 
-      params.caption     = title if title
-      params.picture     = image if image
-      params.description = description if description
+      params.caption     = 'title if title'
+      params.picture     = 'https://pp.vk.me/c637326/v637326607/14a4e/AfmP7vEjKrE.jpg'
+      params.description = 'description if description'
 
       url = 'https://www.facebook.com/dialog/feed?' + $.param(params)
 
     if type == 'vk'
-      url = "http://vk.com/share.php?" + $.param(url: url, title: title.slice(0, 100), description: description.slice(0, 80), image: image)
-
+      url = "http://vk.com/share.php?" 
+      
     if type == 'ok'
       url = "https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&service=odnoklassniki&st.shareUrl=#{ url }"
 
