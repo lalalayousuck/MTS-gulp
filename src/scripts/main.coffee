@@ -62,5 +62,5 @@ $(document).ready ->
   $('.paragraph-toggler').click ->
     $(@).parent().parent().find('.repairs-tab_desc').toggleClass('is-visible')
 
-
-
+  $('.btn_print').click ->
+    window.print();

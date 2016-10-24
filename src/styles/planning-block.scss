@@ -14,6 +14,10 @@
   &.is-active {
     display: block;
   }
+
+  h1 {
+    display: none;
+  }
 }
 
 .repairs-tab {
@@ -21,6 +25,10 @@
 
   &.is-active {
     display: block;
+  }
+
+  h2 {
+    display: none;
   }
 }
 
@@ -77,6 +85,8 @@
     border: 1px solid #888888;
     border-radius: 50%;
     margin: 0 14px 0 9px;
+    transition: opacity 0.2s;
+    opacity: 0.3;
 
     &:before {
       @include icon(plus);

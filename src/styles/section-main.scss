@@ -44,6 +44,8 @@
 }
 
 .section-main_infoblock {
+  padding: 45px 0 45px 50px;
+
   &:before {
     @include icon(red-brush-main);
     position: absolute;

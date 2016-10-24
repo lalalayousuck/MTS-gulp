@@ -1,0 +1,58 @@
+@media print {
+  
+  .repairs-tabs,
+  .repairs-tab {
+    display: block !important;
+  }  
+
+  .repairs-tabs.is-checked h1 {
+    display: block;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 15px 0 15px 5px;
+  }
+
+  .repairs-tab.is-checked h2 {
+    display: block;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 15px 0 15px 5px;
+  }
+
+  .section-tech,
+  .section-flat-plan,
+  .section-ideas,
+  .header,
+  .room-menu,
+  .col-left,
+  .repairs-menu,
+  .planning-block_actions,
+  .room-descriptions,
+  .section-gpon,
+  .section-main_down,
+  .section-main:before,
+  .section-main_infoblock:before,
+  .section-main_infoblock:after,
+  .form-row:not(.is-checked),
+  .section_desc {
+    display: none;
+  }
+
+  .section-main {
+    display: block;
+    min-height: auto;
+    background: none;
+    padding: 0 30px;
+  }
+
+  .section-main_infoblock {
+    width: 100%;
+    border: 0;
+
+    h1 {
+      font-size: 60px;
+      line-height: 80px;
+      color: black;
+    }
+  }
+}
