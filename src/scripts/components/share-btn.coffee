@@ -33,17 +33,17 @@ Component.define 'shareBtn',
         link: 'http://promostaging.inmyroom.ru'
         redirect_uri: 'http://promostaging.inmyroom.ru'
 
-      params.caption     = 'title if title'
+      params.caption     = 'АЗБУКА РЕМОНТА'
       params.picture     = 'https://pp.vk.me/c637326/v637326607/14a4e/AfmP7vEjKrE.jpg'
-      params.description = 'description if description'
+      params.description = 'Хотите обновить интерьер и ждете впечатляющие результаты в короткие сроки? Чтобы ремонт не затягивался, важно предусмотреть всё. Воспользуйтесь списками дел и рекомендациями профессионалов.'
 
       url = 'https://www.facebook.com/dialog/feed?' + $.param(params)
 
     if type == 'vk'
-      url = "http://vk.com/share.php?" 
+      url = "http://vk.com/share.php?" + $.param(url: 'http://promostaging.inmyroom.ru', title: 'АЗБУКА РЕМОНТА', description: 'Хотите обновить интерьер и ждете впечатляющие результаты в короткие сроки? Чтобы ремонт не затягивался, важно предусмотреть всё. Воспользуйтесь списками дел и рекомендациями профессионалов.', image: 'http://ideal.kitchenmag.ru/assets/q3.jpg') 
       
     if type == 'ok'
-      url = "https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&service=odnoklassniki&st.shareUrl=#{ url }"
+      url = "https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&service=odnoklassniki&st.shareUrl='http://promostaging.inmyroom.ru'"
 
     @$block.data('share-url', url)
 

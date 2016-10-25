@@ -3,7 +3,7 @@ var $ = require('jquery');
 Component.define('custom', {
 
   events: {
-    'focus on %input': 'setKeyPressable',
+    'keydown on %input': 'setKeyPressable',
     'input on %input': 'setChanged',
     'blur on %input': 'setKeyUnPressable',
     'click on %plus': 'createCustomTask'
@@ -37,12 +37,10 @@ Component.define('custom', {
 
   setKeyPressable: function() {
     var that = this;
-    this.input.keypress(function() {
-      if (event.keyCode == 13) {
-        event.preventDefault();
-        that.createCustomTask();
-      }
-    })
+    if (event.keyCode == 13) {
+      event.preventDefault();
+      that.createCustomTask();
+    }
   },
 
   setKeyUnPressable: function() {
