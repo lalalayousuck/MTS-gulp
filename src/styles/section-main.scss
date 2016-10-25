@@ -83,6 +83,10 @@
   text-align: center;
   z-index: +1;
 
+  &:hover:before {
+    top: 28px;
+  }
+
   &:before {
     position: absolute;
     display: block;
@@ -94,5 +98,6 @@
     border-bottom: 1px solid black;
     transform: rotate(45deg);
     content: "";
+    transition: all 0.5s;
   }
 }

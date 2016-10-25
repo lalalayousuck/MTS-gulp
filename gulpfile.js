@@ -114,7 +114,7 @@ var gulpSSH = new GulpSSH({
     host: 'hw01.improvemedia.ru',
     port: 2233,
     username: 'inmyroom',
-    privateKey: fs.readFileSync('/Users/pettson/.ssh/id_rsa')
+    privateKey: fs.readFileSync('/Users/Headonfire/.ssh/id_rsa')
   }
 })
 
