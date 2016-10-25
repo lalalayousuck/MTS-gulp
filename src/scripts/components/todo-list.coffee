@@ -4,7 +4,7 @@ Component.define 'todoList',
 
   onDownload: ->
     $.ajax(
-      url: 'https://inmyroom.ru/front_api/mts/pdf',
+      url: 'https://www.inmyroom.ru/front_api/mts/pdf',
       method: 'POST'
       data: { rooms: @serialize() }
     ).done((response) ->
