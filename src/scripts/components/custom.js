@@ -55,13 +55,18 @@ $(document).ready(function() {
     scrollOverflow: false,
     verticalCentered: false,
     lockAnchors: true,
-    afterLoad: function(a, b) {
-      if (b == 3 || b == 4) {
+    afterLoad: function(anchor, index) {
+      if (index == 3 || index == 4) {
         $.fn.fullpage.setAutoScrolling(false);
         var top = $(this).offset().top;
         console.log(top);
         var bottom = top + ($(this).next().offset().top - top);
         console.log(bottom);
+      }
+    },
+    onLeave: function(index, nextIndex, direction) {
+      if (index == 3 || index == 4 && nextIndex == 3 || nextIndex == 4 ) {
+        console.log ('ok');
       } else {
         $.fn.fullpage.setAutoScrolling(true);
       }
