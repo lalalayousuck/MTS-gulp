@@ -19,7 +19,10 @@ Component.define 'todoList',
           {
             name: $(@).data('repair')
             items: $(@).find(':checked').map(->
-              $(@).next().text()
+              if $(@).next().val() == ""
+                $(@).next().text()
+              else
+                $(@).next().val()
             ).get()
           }
         ).get()

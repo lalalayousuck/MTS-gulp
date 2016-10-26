@@ -5,6 +5,8 @@ attachFastClick = require('fastclick')
 
 data = require('./data/posts')
 
+require('./lib/fullpage')
+
 require('./lib/component')
 require('./components/share-btn')
 require('./components/custom')

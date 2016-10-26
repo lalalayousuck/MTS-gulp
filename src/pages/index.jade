@@ -16,1299 +16,1289 @@ html.no-js(lang='')
   body
     
     main
-      section.section-main
-        .container
-          header.header
-            .container
-              ul
-                li
-                  a(href='http://www.inmyroom.ru')
-                    img(src="/assets/imr-logo.png")
-                li
-                  a(href='http://www.inmyroom.ru/my/feed') Моя лента
-                li
-                  a(href='http://www.inmyroom.ru/posts') Идеи
-                li
-                  a(href='http://www.inmyroom.ru/products') Магазины
-                li
-                  a(href='http://www.inmyroom.ru/photos') Фото
-                li
-                  a(href='http://www.inmyroom.ru/discussions') Советы
-                li
-                  a(href='http://www.inmyroom.ru/profi') Профи
-                li
-                  img(src='/assets/mts_header_logo.png')
-          .section_infoblock.section-main_infoblock
-            .section_pretitle спецпроект
-            h1 азбука ремонта
-            .section_desc Хотите обновить интерьер и ждете впечатляющие результаты в короткие сроки? Чтобы ремонт не затягивался, важно предусмотреть всё. Воспользуйтесь списками дел и рекомендациями профессионалов.
-          a.section-main_down(href='#rooms') ЛИСТАЙТЕ ВНИЗ
-      section.section-flat-plan#rooms
-        .container
-          ul.section-list
-            li.is-current
-              .title ВЫБОР КОМНАТЫ
-              .desc Выберите комнату, в которой вы хотите сделать ремонт
-            li
-              a.title(href="#tasklist") СПИСОК ДЕЛ
-            li
-              a.title(href="#ideas") ПОИСК ИДЕЙ
-            li
-              a.title(href="#tech") УМНЫЕ ТЕХНОЛОГИИ
-          //- .flat-plan
-          //-   .room.hall(onclick='ga("send", "event", "plan", "hall");', data-room='Прихожая')
-          //-     span Прихожая
-          //-   .room.sittingroom(onclick='ga("send", "event", "plan", "sittingroom");', data-room='Гостиная')
-          //-     span Гостиная
-          //-   .room.childrens-room(onclick='ga("send", "event", "plan", "nursery");', data-room='Детская')
-          //-     span Детская
-          //-   .room.bathroom(onclick='ga("send", "event", "plan", "bathroom");', data-room='Ванная')
-          //-     span Ванная
-          //-   .room.kitchen(onclick='ga("send", "event", "plan", "kitchen");', data-room='Кухня')
-          //-     span Кухня
-          //-   .room.bedroom(onclick='ga("send", "event", "plan", "bedroom");', data-room='Спальня')
-          //-     span Спальня
-
-          .flat-plan
-            .room.hall(data-room='Прихожая').is-active
-              span Прихожая
-            .room.sittingroom(data-room='Гостиная')
-              span Гостиная
-            .room.childrens-room(data-room='Детская')
-              span Детская
-            .room.bathroom(data-room='Ванная')
-              span Ванная
-            .room.kitchen(data-room='Кухня')
-              span Кухня
-            .room.bedroom(data-room='Спальня')
-              span Спальня
-
-      section.section-room
-        .container
-          ul.room-menu
-            li(data-room='Кухня') Кухня
-            li(data-room='Гостиная') Гостиная
-            li(data-room='Спальня') Спальная комната
-            li(data-room='Ванная') Ванная комната
-            li.is-active(data-room='Прихожая') Прихожая
-            li(data-room='Детская') Детская
-              
-          .room-descriptions#tasklist
-            .room-description(data-room='Кухня')
-              img.section-room_desc(src="/assets/desc-kitchen.png")
-              .section-room_desc-text Без сомнения, «сердце» дома – это его кухня, источник вкусной еды и манящих запахов, а также, в отсутствие столовой, место основного сбора всех домочадцев. Это помещение как никакое другое обязано сочетать в себе всё сразу – сложную технику и уютное пространство, зоны работы и отдыха, а также безопасность и комфорт каждого члена семьи.
-
-            .room-description(data-room='Гостиная')
-              img.section-room_desc(src="/assets/desc-guestroom.png")
-              .section-room_desc-text Из места, которое раньше служило, в основном, для приёма гостей, современная гостиная превратилась в пространство для отдыха, которое лишь иногда «открывает свои двери» для других людей. Телевизор (или камин!), мягкий диван (и его подушки!) – вот, пожалуй, и всё, что объединяет между собой гостиные мира. В остальном гостиная – это комната, в которой ярче всего может расправить крылья полет дизайнерской фантазии.
-
-            .room-description(data-room='Спальня')
-              img.section-room_desc(src="/assets/desc-bedroom.png")
-              .section-room_desc-text Самое интимное и по-настоящему личное пространство квартиры, спальня считается местом для максимального отдыха и расслабления. Тишина, пространство и покой – вот три «столпа», без которых невозможно представить ни одну спальню. Атмофосферу задаёт приглушенное освещение, мягкие цвета и фактуры, а ещё – индивидуальные дизайнерские предпочтения хозяев спальни, которым должно быть комфортно в своём личном пространстве.
-
-            .room-description(data-room='Ванная')
-              img.section-room_desc(src="/assets/desc-bath.png")
-              .section-room_desc-text Самая функциональная комната – ванная комната. И, чаще всего, самая маленькая! На нескольких метрах пространства должна быть продумана каждая деталь – но если всё «собрано» правильно, то эта комната подарит каждому жителю дома массу приятных моментов.
-
-            .room-description(data-room='Прихожая').is-active
-              img.section-room_desc(src="/assets/desc-hall.png")
-              .section-room_desc-text Первое и последнее, что видят гости и хозяева квартиры – это прихожая. Для этого места важнее всего не уют, а функционал – шкаф, чтобы повесить пальто и поставить обувь, полочка для ключей и мелочей, удобный придверный коврик и хорошее освещение!
-
-            .room-description(data-room='Детская')
-              img.section-room_desc(src="/assets/desc-childrensroom.png")
-              .section-room_desc-text Детская – это по-настоящему уникальная комната. С первых дней жизни маленькие хозяева детских начинают познавать это пространство – смотреть, трогать и пробовать на вкус каждый уголок! Игрушки, рисунки, шаги – в этом мире детства произойдёт больше, чем в любой другой комнате дома! Вот почему здесь должно быть безопасно, светло и очень, очень уютно. Счастливых игр!
-
-          .col.col-left
+      #fullpage
+        .section.section-main(data-anchor="main-anchor")
+          .container
+            header.header
+              .container
+                ul
+                  li
+                    a(href='http://www.inmyroom.ru')
+                      img(src="/assets/imr-logo.png")
+                  li
+                    a(href='http://www.inmyroom.ru/my/feed') Моя лента
+                  li
+                    a(href='http://www.inmyroom.ru/posts') Идеи
+                  li
+                    a(href='http://www.inmyroom.ru/products') Магазины
+                  li
+                    a(href='http://www.inmyroom.ru/photos') Фото
+                  li
+                    a(href='http://www.inmyroom.ru/discussions') Советы
+                  li
+                    a(href='http://www.inmyroom.ru/profi') Профи
+                  li
+                    img(src='/assets/mts_header_logo.png')
+            .section_infoblock.section-main_infoblock
+              .section_pretitle спецпроект
+              h1 азбука ремонта
+              .section_desc Хотите обновить интерьер и ждете впечатляющие результаты в короткие сроки? Чтобы ремонт не затягивался, важно предусмотреть всё. Воспользуйтесь списками дел и рекомендациями профессионалов.
+            a.section-main_down(href='#rooms') ЛИСТАЙТЕ ВНИЗ
+        .section.section-flat-plan(data-anchor="rooms-anchor")#rooms
+          .container
             ul.section-list
-              li
-                a.title(href="#rooms") ВЫБОР КОМНАТЫ
               li.is-current
-                .title СПИСОК ДЕЛ
-                .desc Отметьте в списке, что вам может понадобиться при ремонте
+                .title ВЫБОР КОМНАТЫ
+                .desc Выберите комнату, в которой вы хотите сделать ремонт
+              li
+                a.title(href="#tasklist") СПИСОК ДЕЛ
               li
                 a.title(href="#ideas") ПОИСК ИДЕЙ
               li
                 a.title(href="#tech") УМНЫЕ ТЕХНОЛОГИИ
+            //- .flat-plan
+            //-   .room.hall(onclick='ga("send", "event", "plan", "hall");', data-room='Прихожая')
+            //-     span Прихожая
+            //-   .room.sittingroom(onclick='ga("send", "event", "plan", "sittingroom");', data-room='Гостиная')
+            //-     span Гостиная
+            //-   .room.childrens-room(onclick='ga("send", "event", "plan", "nursery");', data-room='Детская')
+            //-     span Детская
+            //-   .room.bathroom(onclick='ga("send", "event", "plan", "bathroom");', data-room='Ванная')
+            //-     span Ванная
+            //-   .room.kitchen(onclick='ga("send", "event", "plan", "kitchen");', data-room='Кухня')
+            //-     span Кухня
+            //-   .room.bedroom(onclick='ga("send", "event", "plan", "bedroom");', data-room='Спальня')
+            //-     span Спальня
 
-          .col.col-right(data-component='todoList')
-            ul.repairs-menu
-              li.is-active(data-repair='Планирование') Планирование
-              li(data-repair='Черновые работы') Черновые работы
-              li(data-repair='Инженерные коммуникации') Инженерные коммуникации
-              li(data-repair='Мебель и техника') Мебель и техника
-              li(data-repair='Декор') Декор
-              li(data-repair='Отделочные работы') Отделочные работы
-              li.add-new(data-repair='Другая категория') Другая категория
+            .flat-plan
+              a(href="#tasklist")  
+                .room.hall(data-room='Прихожая').is-active
+                  span Прихожая
+              a(href="#tasklist")  
+                .room.sittingroom(data-room='Гостиная')
+                  span Гостиная
+              a(href="#tasklist")  
+                .room.childrens-room(data-room='Детская')
+                  span Детская
+              a(href="#tasklist")  
+                .room.bathroom(data-room='Ванная')
+                  span Ванная
+              a(href="#tasklist")  
+                .room.kitchen(data-room='Кухня')
+                  span Кухня
+              a(href="#tasklist")  
+                .room.bedroom(data-room='Спальня')
+                  span Спальня
 
-            .planning-block
-              .repairs-tabs(data-room='Кухня')
-                h1 Кухня
-                .repairs-tab(data-repair='Планирование')
-                  h2 Планирование
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Продумать дизайн-проект обновленного пространства
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Составить смету затрат
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Получить консультацию специалистов по перепланировке
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Заказать проект перепланировки
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Спроектировать электропроводку в помещении
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Придумать систему хранения
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу' value= "")
+        .section.section-room(data-anchor="tasks-anchor")#tasklist
+          .container
+            ul.room-menu
+              li(data-room='Кухня') Кухня
+              li(data-room='Гостиная') Гостиная
+              li(data-room='Спальня') Спальная комната
+              li(data-room='Ванная') Ванная комната
+              li.is-active(data-room='Прихожая') Прихожая
+              li(data-room='Детская') Детская
+                
+            .room-descriptions
+              .room-description(data-room='Кухня')
+                img.section-room_desc(src="/assets/desc-kitchen.png")
+                .section-room_desc-text Без сомнения, «сердце» дома – это его кухня, источник вкусной еды и манящих запахов, а также, в отсутствие столовой, место основного сбора всех домочадцев. Это помещение как никакое другое обязано сочетать в себе всё сразу – сложную технику и уютное пространство, зоны работы и отдыха, а также безопасность и комфорт каждого члена семьи.
 
+              .room-description(data-room='Гостиная')
+                img.section-room_desc(src="/assets/desc-guestroom.png")
+                .section-room_desc-text Из места, которое раньше служило, в основном, для приёма гостей, современная гостиная превратилась в пространство для отдыха, которое лишь иногда «открывает свои двери» для других людей. Телевизор (или камин!), мягкий диван (и его подушки!) – вот, пожалуй, и всё, что объединяет между собой гостиные мира. В остальном гостиная – это комната, в которой ярче всего может расправить крылья полет дизайнерской фантазии.
 
-                .repairs-tab(data-repair='Черновые работы')
-                  h2 Черновые работы
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Очищение от старой отделки 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Возведение перегородок 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Штробирование и прокладка электрического кабеля
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Устройство дверных и оконных проемов
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Устройство пола по маякам
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Монтаж трубы для вытяжки
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+              .room-description(data-room='Спальня')
+                img.section-room_desc(src="/assets/desc-bedroom.png")
+                .section-room_desc-text Самое интимное и по-настоящему личное пространство квартиры, спальня считается местом для максимального отдыха и расслабления. Тишина, пространство и покой – вот три «столпа», без которых невозможно представить ни одну спальню. Атмофосферу задаёт приглушенное освещение, мягкие цвета и фактуры, а ещё – индивидуальные дизайнерские предпочтения хозяев спальни, которым должно быть комфортно в своём личном пространстве.
 
+              .room-description(data-room='Ванная')
+                img.section-room_desc(src="/assets/desc-bath.png")
+                .section-room_desc-text Самая функциональная комната – ванная комната. И, чаще всего, самая маленькая! На нескольких метрах пространства должна быть продумана каждая деталь – но если всё «собрано» правильно, то эта комната подарит каждому жителю дома массу приятных моментов.
 
-                .repairs-tab(data-repair='Инженерные коммуникации')
-                  h2 Инженерные коммуникации
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Заменить трубы на кухне установить сливную канализацию
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Установить краны и фильтр для глубокой очистки холодной воды
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Сделать дополнительный газовый кран (если планируется подключение варочной панели и духовки)
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Проложить систему теплых полов
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Настроить 
-                        span.paragraph-toggler интерактивное цифровое ТВ
-                      .repairs-tab_desc 
-                        | Более 230 телеканалов в превосходном
-                        br
-                        |  Качестве с системой индивидуального подбора и 
-                        a(target='_blank', href='http://mgts.ru/home/tv/tariffs/') современная ТВ-приставка
-                        br
-                        |  С функциями записи, паузы и перемотки
-                        br
-                        |  позволят телевизору работать по вашему расписанию.
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Подключить 
-                        span.paragraph-toggler домашний телефон
-                      .repairs-tab_desc 
-                        | Современный телефон на базе технологии 
-                        a(target='_blank', href='http://mgts.ru/home/phone/') GPON
-                        br
-                        |  – один из самых надежных способов общения с близкими.
-                        br
-                        |  Красивый номер, межгород, цифровые функции.
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Установить 
-                        span.paragraph-toggler систему видеонаблюдения
-                      .repairs-tab_desc 
-                        | Есть ли еда у домашнего питомца,
-                        br
-                        |  как трудятся строители в ваше отсутствие?
-                        br
-                        |  Персональная система 
-                        a(target='_blank', href='http://mgts.ru/home/video/equipment_video/') видеонаблюдения
-                        br
-                        |  позволяет следить за домом из любой точки мира
-                        br
-                        |  в режиме реального времени.
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+              .room-description(data-room='Прихожая').is-active
+                img.section-room_desc(src="/assets/desc-hall.png")
+                .section-room_desc-text Первое и последнее, что видят гости и хозяева квартиры – это прихожая. Для этого места важнее всего не уют, а функционал – шкаф, чтобы повесить пальто и поставить обувь, полочка для ключей и мелочей, удобный придверный коврик и хорошее освещение!
+
+              .room-description(data-room='Детская')
+                img.section-room_desc(src="/assets/desc-childrensroom.png")
+                .section-room_desc-text Детская – это по-настоящему уникальная комната. С первых дней жизни маленькие хозяева детских начинают познавать это пространство – смотреть, трогать и пробовать на вкус каждый уголок! Игрушки, рисунки, шаги – в этом мире детства произойдёт больше, чем в любой другой комнате дома! Вот почему здесь должно быть безопасно, светло и очень, очень уютно. Счастливых игр!
+
+            .col.col-left
+              ul.section-list
+                li
+                  a.title(href="#rooms") ВЫБОР КОМНАТЫ
+                li.is-current
+                  .title СПИСОК ДЕЛ
+                  .desc Отметьте в списке, что вам может понадобиться при ремонте
+                li
+                  a.title(href="#ideas") ПОИСК ИДЕЙ
+                li
+                  a.title(href="#tech") УМНЫЕ ТЕХНОЛОГИИ
+
+            .col.col-right(data-component='todoList')
+              ul.repairs-menu
+                li.is-active(data-repair='Планирование') Планирование
+                li(data-repair='Черновые работы') Черновые работы
+                li(data-repair='Инженерные коммуникации') Инженерные коммуникации
+                li(data-repair='Мебель и техника') Мебель и техника
+                li(data-repair='Декор') Декор
+                li(data-repair='Отделочные работы') Отделочные работы
+                li.add-new(data-repair='Другая категория') Другая категория
+
+              .planning-block
+                .repairs-tabs(data-room='Кухня')
+                  h1 Кухня
+                  .repairs-tab(data-repair='Планирование')
+                    h2 Планирование
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Продумать дизайн-проект обновленного пространства
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Составить смету затрат
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Получить консультацию специалистов по перепланировке
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Заказать проект перепланировки
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Спроектировать электропроводку в помещении
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Придумать систему хранения
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу' value= "")
 
 
-                .repairs-tab(data-repair='Мебель и техника')
-                  h2 Мебель и техника
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Колпак вытяжного шкафа 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Встраиваемая варочная панель и встраиваемый духовой шкаф
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Измельчитель для раковины
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Встроенный фильтр для воды
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Врезная мойка 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Кухонные столешницы и настенные модули для хранения
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Черновые работы')
+                    h2 Черновые работы
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Очищение от старой отделки 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Возведение перегородок 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Штробирование и прокладка электрического кабеля
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Устройство дверных и оконных проемов
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Устройство пола по маякам
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Монтаж трубы для вытяжки
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
 
 
-                .repairs-tab(data-repair='Декор')
-                  h2 Декор
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Органайзер для раковины 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Подставка под горячее 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Сушилка для посуды 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Держатель для бумажных полотенец
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Набор разделочных досок
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Держатель для вина
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Инженерные коммуникации')
+                    h2 Инженерные коммуникации
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Заменить трубы на кухне установить сливную канализацию
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Установить краны и фильтр для глубокой очистки холодной воды
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Сделать дополнительный газовый кран (если планируется подключение варочной панели и духовки)
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Проложить систему теплых полов
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Настроить 
+                          span.paragraph-toggler интерактивное цифровое ТВ
+                        .repairs-tab_desc 
+                          | Более 230 телеканалов в превосходном
+                          br
+                          |  Качестве с системой индивидуального подбора и 
+                          a(target='_blank', href='http://mgts.ru/home/tv/tariffs/') современная ТВ-приставка
+                          br
+                          |  С функциями записи, паузы и перемотки
+                          br
+                          |  позволят телевизору работать по вашему расписанию.
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Подключить 
+                          span.paragraph-toggler домашний телефон
+                        .repairs-tab_desc 
+                          | Современный телефон на базе технологии 
+                          a(target='_blank', href='http://mgts.ru/home/phone/') GPON
+                          br
+                          |  – один из самых надежных способов общения с близкими.
+                          br
+                          |  Красивый номер, межгород, цифровые функции.
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Установить 
+                          span.paragraph-toggler систему видеонаблюдения
+                        .repairs-tab_desc 
+                          | Есть ли еда у домашнего питомца,
+                          br
+                          |  как трудятся строители в ваше отсутствие?
+                          br
+                          |  Персональная система 
+                          a(target='_blank', href='http://mgts.ru/home/video/equipment_video/') видеонаблюдения
+                          br
+                          |  позволяет следить за домом из любой точки мира
+                          br
+                          |  в режиме реального времени.
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
 
 
-                .repairs-tab(data-repair='Отделочные работы')
-                  h2 Отделочные работы
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Устройство подвесного потолка 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Грунтовка, шпатлевка и окраска потолка 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Шпатлевка, окраска стен 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Облицовка стен керамической плиткой 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Затирка швов 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Покрытие пола
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Мебель и техника')
+                    h2 Мебель и техника
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Колпак вытяжного шкафа 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Встраиваемая варочная панель и встраиваемый духовой шкаф
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Измельчитель для раковины
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Встроенный фильтр для воды
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Врезная мойка 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Кухонные столешницы и настенные модули для хранения
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
 
 
-                .repairs-tab(data-repair='Другая категория')
-                  h2 Другая категория
-                  form
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-              .repairs-tabs(data-room='Гостиная')
-                h1 Гостинная
-                .repairs-tab(data-repair='Планирование')
-                  h2 Планирование
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Продумать дизайн-проект обновленного пространства
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Составить смету затрат
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Получить консультацию специалистов по перепланировке
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Получить технический паспорт жилого помещения
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Заказать проект перепланировки
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Подобрать примеры цветовых решений 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Продумать систему хранения 
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Черновые работы')
-                  h2 Черновые работы
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Демонтаж пола из паркетной доски/ линолеума, ковролина
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Расчистка старой краски стен и потолка 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Снятие старых обоев 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Установка стен из гипсокартона в несколько слоев
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Штукатурка стен по маякам 
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Инженерные коммуникации')
-                  h2 Инженерные коммуникации
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Демонтировать радиаторы и установить новые
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Проштробить стены и провести электропроводку
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Установить освещение и подсветки для стеллажей
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Установить кондиционер
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Установить 
-                        span.paragraph-toggler систему видеонаблюдения
-                      .repairs-tab_desc 
-                        | Есть ли еда у домашнего питомца,
-                        br
-                        |  как трудятся строители в ваше отсутствие?
-                        br
-                        |  Персональная система 
-                        a(target='_blank', href='http://mgts.ru/home/video/equipment_video/') видеонаблюдения
-                        br
-                        |  позволяет следить за домом из любой точки мира
-                        br
-                        |  в режиме реального времени.
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Настроить 
-                        span.paragraph-toggler интерактивное цифровое ТВ
-                      .repairs-tab_desc 
-                        | Более 230 телеканалов в превосходном
-                        br
-                        |  Качестве с системой индивидуального подбора и 
-                        a(target='_blank', href='http://mgts.ru/home/tv/tariffs/') современная ТВ-приставка
-                        br
-                        |  С функциями записи, паузы и перемотки
-                        br
-                        |  позволят телевизору работать по вашему расписанию.
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Провести 
-                        span.paragraph-toggler интернет
-                      .repairs-tab_desc 
-                        | Безлимитный доступ в Интернет
-                        br
-                        |  на скорости до 500 Мбит/с
-                        br
-                        |  по современной технологии 
-                        a(target='_blank', href='http://mgts.ru/home/internet/tariffs/') GPON
-                        br
-                        |  позволяет следить за домом из любой точки мира
-                        br
-                        |  в режиме реального времени.
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Подключить 
-                        span.paragraph-toggler домашний телефон
-                      .repairs-tab_desc 
-                        | Современный телефон на базе технологии 
-                        a(target='_blank', href='http://mgts.ru/home/phone/') GPON
-                        br
-                        |  – один из самых надежных способов общения с близкими.
-                        br
-                        |  Красивый номер, межгород, цифровые функции.
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Мебель и техника')
-                  h2 Мебель и техника
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Журнальный столик 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Книжные полки, шкафы
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Диван, кресла и табуреты для ног 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Тумба под ТВ с местом для хранения 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Торшеры для создания уюта 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Кресла-мешки 
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Декор')
-                  h2 Декор
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Декоративные подушки 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Рамки для фотографий 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Вазы для цветов 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Скретч-карты
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Стильный ковер
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Шторы 
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Отделочные работы')
-                  h2 Отделочные работы
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Устройство реечных подвесных потолков 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Грунтовка, шпатлевка и окраска потолка и стен 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Оклейка стен обоями 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Оклейка стен обоями под окраску
-                    .form-row.new-checkbox(data-component="custom")
-                      input.checkbox(type='checkbox')
-                      p Грунтовка и шпатлевка откосов 
-                    .form-row.new-checkbox(data-component="custom")
-                      input.checkbox(type='checkbox')
-                      p Покрытие пола
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Другая категория')
-                  h2 Другая категория
-                  form
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-              .repairs-tabs(data-room='Спальня')
-                h1 Спальня
-                .repairs-tab(data-repair='Планирование')
-                  h2 Планирование
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Продумать дизайн-проект обновленного пространства
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Получить консультацию специалистов по перепланировке
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Получить технический паспорт жилого помещения
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Заказать проект перепланировки
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Подобрать примеры цветовых решений 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Продумать систему хранения 
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Черновые работы')
-                  h2 Черновые работы
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Заполнение оконных и дверных проемов
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Штукатурка и отделка поверхности стен и потолка
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Укладка цементной стяжки пола 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Разводка телефонного/ телевизионного кабеля
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Штукатурка стен по маякам
-                    .form-row
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Инженерные коммуникации')
-                  h2 Инженерные коммуникации
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Демонтировать радиаторы и установить новые
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Установить выключатели и розетки
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Продумать несколько видов освещения для разного настроения
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Установить кондиционер
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Настроить 
-                        span.paragraph-toggler интерактивное цифровое ТВ
-                      .repairs-tab_desc
-                        | Более 230 телеканалов в превосходном
-                        br
-                        |  Качестве с системой индивидуального подбора и 
-                        a(target='_blank', href='http://mgts.ru/home/tv/tariffs/') современная ТВ-приставка
-                        br
-                        |  С функциями записи, паузы и перемотки
-                        br
-                        |  позволят телевизору работать по вашему расписанию.
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Провести 
-                        span.paragraph-toggler интернет
-                      .repairs-tab_desc
-                        | Безлимитный доступ в Интернет
-                        br
-                        |  на скорости до 500 Мбит/с
-                        br
-                        |  по современной технологии 
-                        a(target='_blank', href='http://mgts.ru/home/internet/tariffs/') GPON
-                        br
-                        |  позволяет следить за домом из любой точки мира
-                        br
-                        |  в режиме реального времени.
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Подключить 
-                        span.paragraph-toggler домашний телефон
-                      .repairs-tab_desc
-                        | Современный телефон на базе технологии 
-                        a(target='_blank', href='http://mgts.ru/home/phone/') GPON
-                        br
-                        |  – один из самых надежных способов общения с близкими.
-                        br
-                        |  Красивый номер, межгород, цифровые функции.
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Мебель и техника')
-                  h2 Мебель и техника
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Ортопедический матрас 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Кровать с подъемным механизмом
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Зеркало 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Комод
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Прикроватные тумбы
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Шкаф для одежды
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Декор')
-                  h2 Декор
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Ароматические свечи
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Кашпо с системой автополива
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Декоративная ширма
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Бра
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Декоративные подушки
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Мягкий ковер
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Отделочные работы')
-                  h2 Отделочные работы
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Устройство реечных подвесных потолков 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Грунтовка, шпатлевка и окраска потолка и стен 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Оклейка стен обоями 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Оклейка стен обоями под окраску
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Грунтовка и шпатлевка откосов 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Покрытие пола
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Другая категория')
-                  h2 Другая категория
-                  form
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-              .repairs-tabs(data-room='Ванная')
-                h1 Ванная
-                .repairs-tab(data-repair='Планирование')
-                  h2 Планирование
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Продумать дизайн-проект обновленного пространства
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Получить консультацию специалистов по перепланировке
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Получить технический паспорт жилого помещения
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Заказать проект перепланировки
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Подобрать примеры цветовых решений 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Продумать систему хранения 
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Черновые работы')
-                  h2 Черновые работы
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Демонтаж унитаза/биде и ванны
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Демонтаж смесителей и умывальника
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Демонтаж пола и стен из плитки
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Укладка цементной стяжки пола 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Монтаж сантехники
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Установки вентиляции
-                    .form-row
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Инженерные коммуникации')
-                  h2 Инженерные коммуникации
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Гидроизоляция пола в санузлах 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Монтаж системы трубопровода 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Прокладка теплого пола 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p становка сливной канализации 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Установка кранов 
-                    .form-row
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Мебель и техника')
-                  h2 Мебель и техника
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Унитаз с функцией биде
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Стиральная машина под одной столешницей с раковиной
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Угловая полка для душевой
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Держатель для полотенца
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Навесные шкафчики
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Держатель для фена
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Декор')
-                  h2 Декор
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Навесной органайзер
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Крючки для полотенец
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Стеклянная перегородка
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Корзина для белья
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Подставка для мыла и держатель для зубной пасты
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Отделочные работы')
-                  h2 Отделочные работы
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Грунтовка, шпатлевка и окраска потолка 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Шпатлевка стен 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Облицовка стен керамической плиткой 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Оклейка стен обоями под окраску
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Затирка швов 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Грунтовка и шпатлевка откосов 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Укладка плитки на пол
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Другая категория')
-                  h2 Другая категория
-                  form
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-              .repairs-tabs.is-active(data-room='Прихожая')
-                h1 Прихожая
-                .repairs-tab.is-active(data-repair='Планирование')
-                  h2 Планирование
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Продумать дизайн-проект обновленного пространства
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Получить консультацию
-                        br
-                        |  специалистов по перепланировке
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Получить технический паспорт жилого помещения
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Заказать проект перепланировки
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Подобрать примеры цветовых решений 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Продумать систему хранения 
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Черновые работы')
-                  h2 Черновые работы
-                  form
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Инженерные коммуникации')
-                  h2 Инженерные коммуникации
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Провести электропроводку
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Установить выключатели и розетки
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Продумать несколько видов освещения, которые можно включать по отдельности
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Установить домофон
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Защитить квартиру 
-                        span.paragraph-toggler охранной сигнализацией
-                      .repairs-tab_desc
-                        | Персональная 
-                        a(target='_blank', href='http://mgts.ru/home/os/') охранная сигнализация
-                        br
-                        |  – проверенное и эффективное решение
-                        br
-                        |  для обеспечения безопасности вашего дома.
-                        br
-                        |  Современные беспроводные датчики, два защищенных канала передачи
-                        br
-                        |  тревожных сигналов и надежное техническое обслуживание.
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Установить 
-                        span.paragraph-toggler систему видеонаблюдения
-                      .repairs-tab_desc
-                        | Есть ли еда у домашнего питомца,
-                        br
-                        |  как трудятся строители в ваше отсутствие?
-                        br
-                        |  Персональная система 
-                        a(target='_blank', href='http://mgts.ru/home/video/equipment_video/') видеонаблюдения
-                        br
-                        |  позволяет следить за домом из любой точки мира
-                        br
-                        |  в режиме реального времени.
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Подключить 
-                        span.paragraph-toggler домашний телефон
-                      .repairs-tab_desc
-                        | Современный телефон на базе технологии 
-                        a(target='_blank', href='http://mgts.ru/home/phone/') GPON
-                        br
-                        |  – один из самых надежных способов общения с близкими.
-                        br
-                        |  Красивый номер, межгород, цифровые функции.
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Установить 
-                        span.paragraph-toggler
-                          | абонентское устройство GPON со встроенным Wi-FI
-                      .repairs-tab_desc
-                        | Технология 
-                        a(target='_blank', href='http://mgts.ru/home/phone/') GPON
-                        br
-                        |  позволит вам пользоваться высокоскоростным интернетом
-                        br
-                        |  до 500 Мбит/с, цифровым ТВ с функциями управления эфиром и
-                        br
-                        |  Домашней Телефонией последнего поколения.
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Мебель и техника')
-                  h2 Мебель и техника
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Банкетка 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Зеркало 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Подставка для обуви
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Органайзер для аксессуаров
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Шкаф или открытая система хранения
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Комод или консоль
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Декор')
-                  h2 Декор
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Поворотная вешалка 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Ложка для обуви
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Держатель-брелок для ключей
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Органайзер для шарфов 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Ваза для зонтов
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Отделочные работы')
-                  h2 Отделочные работы
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Устройство реечных подвесных потолков 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Грунтовка, шпатлевка и окраска потолка и стен 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Оклейка стен обоями 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Оклейка стен обоями под окраску
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Грунтовка и шпатлевка откосов 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Покрытие пола
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Другая категория')
-                  h2 Другая категория
-                  form
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-              .repairs-tabs(data-room='Детская')
-                h1 Детская
-                .repairs-tab(data-repair='Планирование')
-                  h2 Планирование
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Продумать дизайн-проект обновленного пространства
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Получить консультацию специалистов по перепланировке
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Получить технический паспорт жилого помещения
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Заказать проект перепланировки
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Подобрать примеры цветовых решений 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Продумать систему хранения 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Продумать безопасность
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Черновые работы')
-                  h2 Черновые работы
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Заполнение оконных и дверных проемов 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Штукатурка и отделка поверхности стен и потолка 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Укладка цементной стяжки пола 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Разводка телефонного/
-                        br
-                        |  телевизионного кабеля
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Штукатурка стен по маякам 
-                    .form-row
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Инженерные коммуникации')
-                  h2 Инженерные коммуникации
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Демонтировать радиаторы и установить новые
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Провести электропроводку
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Установить выключатели и розетки
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Продумать несколько видов освещения,
-                        br
-                        |  которые можно включать по отдельности
-                    .form-row.new-checkbox(data-component="custom")
-                      input.checkbox(type='checkbox')
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Установить 
-                        span.paragraph-toggler систему видеонаблюдения
-                      .repairs-tab_desc
-                        | Есть ли еда у домашнего питомца,
-                        br
-                        |  как трудятся строители в ваше отсутствие?
-                        br
-                        |  Персональная система 
-                        a(target='_blank', href='http://mgts.ru/home/video/equipment_video/') видеонаблюдения
-                        br
-                        |  позволяет следить за домом из любой точки мира
-                        br
-                        |  в режиме реального времени.
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Провести 
-                        span.paragraph-toggler интернет
-                      .repairs-tab_desc
-                        | Безлимитный доступ в Интернет
-                        br
-                        |  на скорости до 500 Мбит/с
-                        br
-                        |  по современной технологии 
-                        a(target='_blank', href='http://mgts.ru/home/internet/tariffs/') GPON
-                        br
-                        |  позволяет следить за домом из любой точки мира
-                        br
-                        |  в режиме реального времени.
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Настроить 
-                        span.paragraph-toggler интерактивное цифровое ТВ
-                      .repairs-tab_desc
-                        | Более 230 телеканалов в превосходном
-                        br
-                        |  Качестве с системой индивидуального подбора и 
-                        a(target='_blank', href='http://mgts.ru/home/tv/tariffs/') современная ТВ-приставка
-                        br
-                        |  С функциями записи, паузы и перемотки
-                        br
-                        |  позволят телевизору работать по вашему расписанию.
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p
-                        | Подключить 
-                        span.paragraph-toggler домашний телефон
-                      .repairs-tab_desc
-                        | Современный телефон на базе технологии 
-                        a(target='_blank', href='http://mgts.ru/home/phone/') GPON
-                        br
-                        |  – один из самых надежных способов общения с близкими.
-                        br
-                        |  Простой красивый номер, удобное использование!
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Мебель и техника')
-                  h2 Мебель и техника
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Комод и шкаф 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Рабочий стол 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Тумба под игрушки
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Стеллаж для книг 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Спортивный уголок
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Кровать
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Декор')
-                  h2 Декор
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Лампа-часы
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Разноцветные шторы
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Постельное белье с любимыми героями
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Люминесцентные звезды 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Подвесной светильник
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Отделочные работы')
-                  h2 Отделочные работы
-                  form
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Устройство реечных подвесных потолков 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Грунтовка, шпатлевка и окраска потолка и стен 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Оклейка стен обоями 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Оклейка стен обоями под окраску
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Грунтовка и шпатлевка откосов 
-                    .form-row
-                      input.checkbox(type='checkbox')
-                      p Покрытие пола
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-                .repairs-tab(data-repair='Другая категория')
-                  h2 Другая категория
-                  form
-                    .form-row.new-checkbox(data-component="custom")
-                      .plus.js-customPlus
-                      input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
-
-            .planning-block_actions                 
-              .btn.btn_save.js-todoListDownload Скачать
-              .btn.btn_print.js-todoListPrint Печать
-              br
-              .share-btn.share-btn__fb(data-component='shareBtn', data-title=title, data-description=description, data-type="fb", data-url=url, data-image=image)
-                | Share
-                .share-btn_counter.js-shareBtnCounter
-              .share-btn.share-btn__ok(data-component='shareBtn', data-type="ok", , data-title=title, data-description=description, data-url=url, data-image=image)
-                | Share
-                .share-btn_counter.js-shareBtnCounter
-              .share-btn.share-btn__vk(data-component='shareBtn', data-type="vk", data-title=title, data-description=description, data-url=url, data-image=image)
-                | Share
-                .share-btn_counter.js-shareBtnCounter
-
-      section.section-ideas
-        .container
-          .col.col-left
-            ul.section-list
-              li
-                a.title(href="#rooms") ВЫБОР КОМНАТЫ
-              li
-                a.title(href="#tasklist") СПИСОК ДЕЛ
-              li.is-current
-                .title ПОИСК ИДЕЙ
-                .desc Вдохновляйтесь идеями ремонта и полезными советами
-              li
-                a.title(href="#tech") УМНЫЕ ТЕХНОЛОГИИ
-          .col.col-right#ideas
+                  .repairs-tab(data-repair='Декор')
+                    h2 Декор
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Органайзер для раковины 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Подставка под горячее 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Сушилка для посуды 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Держатель для бумажных полотенец
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Набор разделочных досок
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Держатель для вина
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
 
 
-      section.section-tech#tech
-        .section-tech_gradient
+                  .repairs-tab(data-repair='Отделочные работы')
+                    h2 Отделочные работы
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Устройство подвесного потолка 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Грунтовка, шпатлевка и окраска потолка 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Шпатлевка, окраска стен 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Облицовка стен керамической плиткой 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Затирка швов 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Покрытие пола
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+
+
+                  .repairs-tab(data-repair='Другая категория')
+                    h2 Другая категория
+                    form
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                .repairs-tabs(data-room='Гостиная')
+                  h1 Гостинная
+                  .repairs-tab(data-repair='Планирование')
+                    h2 Планирование
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Продумать дизайн-проект обновленного пространства
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Составить смету затрат
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Получить консультацию специалистов по перепланировке
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Получить технический паспорт жилого помещения
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Заказать проект перепланировки
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Подобрать примеры цветовых решений 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Продумать систему хранения 
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Черновые работы')
+                    h2 Черновые работы
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Демонтаж пола из паркетной доски/ линолеума, ковролина
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Расчистка старой краски стен и потолка 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Снятие старых обоев 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Установка стен из гипсокартона в несколько слоев
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Штукатурка стен по маякам 
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Инженерные коммуникации')
+                    h2 Инженерные коммуникации
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Демонтировать радиаторы и установить новые
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Проштробить стены и провести электропроводку
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Установить освещение и подсветки для стеллажей
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Установить кондиционер
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Установить 
+                          span.paragraph-toggler систему видеонаблюдения
+                        .repairs-tab_desc 
+                          | Есть ли еда у домашнего питомца,
+                          br
+                          |  как трудятся строители в ваше отсутствие?
+                          br
+                          |  Персональная система 
+                          a(target='_blank', href='http://mgts.ru/home/video/equipment_video/') видеонаблюдения
+                          br
+                          |  позволяет следить за домом из любой точки мира
+                          br
+                          |  в режиме реального времени.
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Настроить 
+                          span.paragraph-toggler интерактивное цифровое ТВ
+                        .repairs-tab_desc 
+                          | Более 230 телеканалов в превосходном
+                          br
+                          |  Качестве с системой индивидуального подбора и 
+                          a(target='_blank', href='http://mgts.ru/home/tv/tariffs/') современная ТВ-приставка
+                          br
+                          |  С функциями записи, паузы и перемотки
+                          br
+                          |  позволят телевизору работать по вашему расписанию.
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Провести 
+                          span.paragraph-toggler интернет
+                        .repairs-tab_desc 
+                          | Безлимитный доступ в Интернет
+                          br
+                          |  на скорости до 500 Мбит/с
+                          br
+                          |  по современной технологии 
+                          a(target='_blank', href='http://mgts.ru/home/internet/tariffs/') GPON
+                          br
+                          |  позволяет следить за домом из любой точки мира
+                          br
+                          |  в режиме реального времени.
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Подключить 
+                          span.paragraph-toggler домашний телефон
+                        .repairs-tab_desc 
+                          | Современный телефон на базе технологии 
+                          a(target='_blank', href='http://mgts.ru/home/phone/') GPON
+                          br
+                          |  – один из самых надежных способов общения с близкими.
+                          br
+                          |  Красивый номер, межгород, цифровые функции.
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Мебель и техника')
+                    h2 Мебель и техника
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Журнальный столик 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Книжные полки, шкафы
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Диван, кресла и табуреты для ног 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Тумба под ТВ с местом для хранения 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Торшеры для создания уюта 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Кресла-мешки 
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Декор')
+                    h2 Декор
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Декоративные подушки 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Рамки для фотографий 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Вазы для цветов 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Скретч-карты
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Стильный ковер
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Шторы 
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Отделочные работы')
+                    h2 Отделочные работы
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Устройство реечных подвесных потолков 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Грунтовка, шпатлевка и окраска потолка и стен 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Оклейка стен обоями 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Оклейка стен обоями под окраску
+                      .form-row.new-checkbox(data-component="custom")
+                        input.checkbox(type='checkbox')
+                        p Грунтовка и шпатлевка откосов 
+                      .form-row.new-checkbox(data-component="custom")
+                        input.checkbox(type='checkbox')
+                        p Покрытие пола
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Другая категория')
+                    h2 Другая категория
+                    form
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                .repairs-tabs(data-room='Спальня')
+                  h1 Спальня
+                  .repairs-tab(data-repair='Планирование')
+                    h2 Планирование
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Продумать дизайн-проект обновленного пространства
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Получить консультацию специалистов по перепланировке
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Получить технический паспорт жилого помещения
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Заказать проект перепланировки
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Подобрать примеры цветовых решений 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Продумать систему хранения 
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Черновые работы')
+                    h2 Черновые работы
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Заполнение оконных и дверных проемов
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Штукатурка и отделка поверхности стен и потолка
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Укладка цементной стяжки пола 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Разводка телефонного/ телевизионного кабеля
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Штукатурка стен по маякам
+                      .form-row
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Инженерные коммуникации')
+                    h2 Инженерные коммуникации
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Демонтировать радиаторы и установить новые
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Установить выключатели и розетки
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Продумать несколько видов освещения для разного настроения
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Установить кондиционер
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Настроить 
+                          span.paragraph-toggler интерактивное цифровое ТВ
+                        .repairs-tab_desc
+                          | Более 230 телеканалов в превосходном
+                          br
+                          |  Качестве с системой индивидуального подбора и 
+                          a(target='_blank', href='http://mgts.ru/home/tv/tariffs/') современная ТВ-приставка
+                          br
+                          |  С функциями записи, паузы и перемотки
+                          br
+                          |  позволят телевизору работать по вашему расписанию.
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Провести 
+                          span.paragraph-toggler интернет
+                        .repairs-tab_desc
+                          | Безлимитный доступ в Интернет
+                          br
+                          |  на скорости до 500 Мбит/с
+                          br
+                          |  по современной технологии 
+                          a(target='_blank', href='http://mgts.ru/home/internet/tariffs/') GPON
+                          br
+                          |  позволяет следить за домом из любой точки мира
+                          br
+                          |  в режиме реального времени.
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Подключить 
+                          span.paragraph-toggler домашний телефон
+                        .repairs-tab_desc
+                          | Современный телефон на базе технологии 
+                          a(target='_blank', href='http://mgts.ru/home/phone/') GPON
+                          br
+                          |  – один из самых надежных способов общения с близкими.
+                          br
+                          |  Красивый номер, межгород, цифровые функции.
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Мебель и техника')
+                    h2 Мебель и техника
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Ортопедический матрас 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Кровать с подъемным механизмом
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Зеркало 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Комод
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Прикроватные тумбы
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Шкаф для одежды
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Декор')
+                    h2 Декор
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Ароматические свечи
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Кашпо с системой автополива
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Декоративная ширма
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Бра
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Декоративные подушки
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Мягкий ковер
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Отделочные работы')
+                    h2 Отделочные работы
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Устройство реечных подвесных потолков 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Грунтовка, шпатлевка и окраска потолка и стен 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Оклейка стен обоями 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Оклейка стен обоями под окраску
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Грунтовка и шпатлевка откосов 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Покрытие пола
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Другая категория')
+                    h2 Другая категория
+                    form
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                .repairs-tabs(data-room='Ванная')
+                  h1 Ванная
+                  .repairs-tab(data-repair='Планирование')
+                    h2 Планирование
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Продумать дизайн-проект обновленного пространства
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Получить консультацию специалистов по перепланировке
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Получить технический паспорт жилого помещения
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Заказать проект перепланировки
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Подобрать примеры цветовых решений 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Продумать систему хранения 
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Черновые работы')
+                    h2 Черновые работы
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Демонтаж унитаза/биде и ванны
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Демонтаж смесителей и умывальника
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Демонтаж пола и стен из плитки
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Укладка цементной стяжки пола 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Монтаж сантехники
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Установки вентиляции
+                      .form-row
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Инженерные коммуникации')
+                    h2 Инженерные коммуникации
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Гидроизоляция пола в санузлах 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Монтаж системы трубопровода 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Прокладка теплого пола 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p становка сливной канализации 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Установка кранов 
+                      .form-row
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Мебель и техника')
+                    h2 Мебель и техника
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Унитаз с функцией биде
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Стиральная машина под одной столешницей с раковиной
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Угловая полка для душевой
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Держатель для полотенца
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Навесные шкафчики
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Держатель для фена
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Декор')
+                    h2 Декор
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Навесной органайзер
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Крючки для полотенец
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Стеклянная перегородка
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Корзина для белья
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Подставка для мыла и держатель для зубной пасты
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Отделочные работы')
+                    h2 Отделочные работы
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Грунтовка, шпатлевка и окраска потолка 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Шпатлевка стен 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Облицовка стен керамической плиткой 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Оклейка стен обоями под окраску
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Затирка швов 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Грунтовка и шпатлевка откосов 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Укладка плитки на пол
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Другая категория')
+                    h2 Другая категория
+                    form
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                .repairs-tabs.is-active(data-room='Прихожая')
+                  h1 Прихожая
+                  .repairs-tab.is-active(data-repair='Планирование')
+                    h2 Планирование
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Продумать дизайн-проект обновленного пространства
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Получить консультацию
+                          br
+                          |  специалистов по перепланировке
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Получить технический паспорт жилого помещения
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Заказать проект перепланировки
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Подобрать примеры цветовых решений 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Продумать систему хранения 
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Черновые работы')
+                    h2 Черновые работы
+                    form
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Инженерные коммуникации')
+                    h2 Инженерные коммуникации
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Провести электропроводку
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Установить выключатели и розетки
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Продумать несколько видов освещения, которые можно включать по отдельности
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Установить домофон
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Защитить квартиру 
+                          span.paragraph-toggler охранной сигнализацией
+                        .repairs-tab_desc
+                          | Персональная 
+                          a(target='_blank', href='http://mgts.ru/home/os/') охранная сигнализация
+                          br
+                          |  – проверенное и эффективное решение
+                          br
+                          |  для обеспечения безопасности вашего дома.
+                          br
+                          |  Современные беспроводные датчики, два защищенных канала передачи
+                          br
+                          |  тревожных сигналов и надежное техническое обслуживание.
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Установить 
+                          span.paragraph-toggler систему видеонаблюдения
+                        .repairs-tab_desc
+                          | Есть ли еда у домашнего питомца,
+                          br
+                          |  как трудятся строители в ваше отсутствие?
+                          br
+                          |  Персональная система 
+                          a(target='_blank', href='http://mgts.ru/home/video/equipment_video/') видеонаблюдения
+                          br
+                          |  позволяет следить за домом из любой точки мира
+                          br
+                          |  в режиме реального времени.
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Подключить 
+                          span.paragraph-toggler домашний телефон
+                        .repairs-tab_desc
+                          | Современный телефон на базе технологии 
+                          a(target='_blank', href='http://mgts.ru/home/phone/') GPON
+                          br
+                          |  – один из самых надежных способов общения с близкими.
+                          br
+                          |  Красивый номер, межгород, цифровые функции.
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Установить 
+                          span.paragraph-toggler
+                            | абонентское устройство GPON со встроенным Wi-FI
+                        .repairs-tab_desc
+                          | Технология 
+                          a(target='_blank', href='http://mgts.ru/home/phone/') GPON
+                          br
+                          |  позволит вам пользоваться высокоскоростным интернетом
+                          br
+                          |  до 500 Мбит/с, цифровым ТВ с функциями управления эфиром и
+                          br
+                          |  Домашней Телефонией последнего поколения.
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Мебель и техника')
+                    h2 Мебель и техника
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Банкетка 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Зеркало 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Подставка для обуви
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Органайзер для аксессуаров
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Шкаф или открытая система хранения
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Комод или консоль
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Декор')
+                    h2 Декор
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Поворотная вешалка 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Ложка для обуви
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Держатель-брелок для ключей
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Органайзер для шарфов 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Ваза для зонтов
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Отделочные работы')
+                    h2 Отделочные работы
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Устройство реечных подвесных потолков 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Грунтовка, шпатлевка и окраска потолка и стен 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Оклейка стен обоями 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Оклейка стен обоями под окраску
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Грунтовка и шпатлевка откосов 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Покрытие пола
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Другая категория')
+                    h2 Другая категория
+                    form
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                .repairs-tabs(data-room='Детская')
+                  h1 Детская
+                  .repairs-tab(data-repair='Планирование')
+                    h2 Планирование
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Продумать дизайн-проект обновленного пространства
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Получить консультацию специалистов по перепланировке
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Получить технический паспорт жилого помещения
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Заказать проект перепланировки
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Подобрать примеры цветовых решений 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Продумать систему хранения 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Продумать безопасность
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Черновые работы')
+                    h2 Черновые работы
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Заполнение оконных и дверных проемов 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Штукатурка и отделка поверхности стен и потолка 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Укладка цементной стяжки пола 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Разводка телефонного/
+                          br
+                          |  телевизионного кабеля
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Штукатурка стен по маякам 
+                      .form-row
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Инженерные коммуникации')
+                    h2 Инженерные коммуникации
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Демонтировать радиаторы и установить новые
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Провести электропроводку
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Установить выключатели и розетки
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Продумать несколько видов освещения,
+                          br
+                          |  которые можно включать по отдельности
+                      .form-row.new-checkbox(data-component="custom")
+                        input.checkbox(type='checkbox')
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Установить 
+                          span.paragraph-toggler систему видеонаблюдения
+                        .repairs-tab_desc
+                          | Есть ли еда у домашнего питомца,
+                          br
+                          |  как трудятся строители в ваше отсутствие?
+                          br
+                          |  Персональная система 
+                          a(target='_blank', href='http://mgts.ru/home/video/equipment_video/') видеонаблюдения
+                          br
+                          |  позволяет следить за домом из любой точки мира
+                          br
+                          |  в режиме реального времени.
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Провести 
+                          span.paragraph-toggler интернет
+                        .repairs-tab_desc
+                          | Безлимитный доступ в Интернет
+                          br
+                          |  на скорости до 500 Мбит/с
+                          br
+                          |  по современной технологии 
+                          a(target='_blank', href='http://mgts.ru/home/internet/tariffs/') GPON
+                          br
+                          |  позволяет следить за домом из любой точки мира
+                          br
+                          |  в режиме реального времени.
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Настроить 
+                          span.paragraph-toggler интерактивное цифровое ТВ
+                        .repairs-tab_desc
+                          | Более 230 телеканалов в превосходном
+                          br
+                          |  Качестве с системой индивидуального подбора и 
+                          a(target='_blank', href='http://mgts.ru/home/tv/tariffs/') современная ТВ-приставка
+                          br
+                          |  С функциями записи, паузы и перемотки
+                          br
+                          |  позволят телевизору работать по вашему расписанию.
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p
+                          | Подключить 
+                          span.paragraph-toggler домашний телефон
+                        .repairs-tab_desc
+                          | Современный телефон на базе технологии 
+                          a(target='_blank', href='http://mgts.ru/home/phone/') GPON
+                          br
+                          |  – один из самых надежных способов общения с близкими.
+                          br
+                          |  Простой красивый номер, удобное использование!
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Мебель и техника')
+                    h2 Мебель и техника
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Комод и шкаф 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Рабочий стол 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Тумба под игрушки
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Стеллаж для книг 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Спортивный уголок
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Кровать
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Декор')
+                    h2 Декор
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Лампа-часы
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Разноцветные шторы
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Постельное белье с любимыми героями
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Люминесцентные звезды 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Подвесной светильник
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Отделочные работы')
+                    h2 Отделочные работы
+                    form
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Устройство реечных подвесных потолков 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Грунтовка, шпатлевка и окраска потолка и стен 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Оклейка стен обоями 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Оклейка стен обоями под окраску
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Грунтовка и шпатлевка откосов 
+                      .form-row
+                        input.checkbox(type='checkbox')
+                        p Покрытие пола
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+                  .repairs-tab(data-repair='Другая категория')
+                    h2 Другая категория
+                    form
+                      .form-row.new-checkbox(data-component="custom")
+                        .plus.js-customPlus
+                        input.js-customInput.text(type='text', placeholder='Добавьте свою задачу')
+
+              .planning-block_actions                 
+                .btn.btn_save.js-todoListDownload Скачать
+                .btn.btn_print.js-todoListPrint Печать
+                br
+                .share-btn.share-btn__fb(data-component='shareBtn', data-title=title, data-description=description, data-type="fb", data-url=url, data-image=image)
+                  | Share
+                  .share-btn_counter.js-shareBtnCounter
+                .share-btn.share-btn__ok(data-component='shareBtn', data-type="ok", , data-title=title, data-description=description, data-url=url, data-image=image)
+                  | Share
+                  .share-btn_counter.js-shareBtnCounter
+                .share-btn.share-btn__vk(data-component='shareBtn', data-type="vk", data-title=title, data-description=description, data-url=url, data-image=image)
+                  | Share
+                  .share-btn_counter.js-shareBtnCounter
+
+        .section.section-ideas(data-anchor="ideas-anchor")
           .container
             .col.col-left
               ul.section-list
@@ -1316,22 +1306,41 @@ html.no-js(lang='')
                   a.title(href="#rooms") ВЫБОР КОМНАТЫ
                 li
                   a.title(href="#tasklist") СПИСОК ДЕЛ
-                li
-                  a.title(href="#ideas") ПОИСК ИДЕЙ
-                  
                 li.is-current
-                  .title УМНЫЕ ТЕХНОЛОГИИ
-                  .desc Узнайте все о преимуществах GPON
+                  .title ПОИСК ИДЕЙ
+                  .desc Вдохновляйтесь идеями ремонта и полезными советами
+                li
+                  a.title(href="#tech") УМНЫЕ ТЕХНОЛОГИИ
+            .col.col-right#ideas
 
-            .section_infoblock.section-tech_infoblock
-              h1 гид по gpon
-              h2 Умные технологии для вашего дома
 
-      section.section-gpon
-        .container
-          .section-gpon_title GPON - оптика до квартиры
-          a(href="#")
-            img(src="/assets/logo-mgts.png")
+        .section.section-tech(data-anchor="tech-anchor")#tech
+          .section-tech_gradient
+            .container
+              .col.col-left
+                ul.section-list
+                  li
+                    a.title(href="#rooms") ВЫБОР КОМНАТЫ
+                  li
+                    a.title(href="#tasklist") СПИСОК ДЕЛ
+                  li
+                    a.title(href="#ideas") ПОИСК ИДЕЙ
+                    
+                  li.is-current
+                    .title УМНЫЕ ТЕХНОЛОГИИ
+                    .desc Узнайте все о преимуществах GPON
+
+              .section_infoblock.section-tech_infoblock
+                h1 гид по gpon
+                h2 Умные технологии для вашего дома
+                a(href="https://www.inmyroom.ru/posts/13543?token=ce4f1895504873bc835c8abf18122a68")
+                  .btn.btn-gpon Посмотреть
+
+          a(href="https://www.inmyroom.ru/posts/13543?token=ce4f1895504873bc835c8abf18122a68")  
+            .section-gpon
+              .container
+                .section-gpon_title GPON - оптика до квартиры
+                img(src="/assets/logo-mgts.png")  
 
                 
 

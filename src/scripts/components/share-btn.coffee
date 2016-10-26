@@ -34,13 +34,13 @@ Component.define 'shareBtn',
         redirect_uri: 'http://promostaging.inmyroom.ru'
 
       params.caption     = 'АЗБУКА РЕМОНТА'
-      params.picture     = 'https://pp.vk.me/c637326/v637326607/14a4e/AfmP7vEjKrE.jpg'
+      params.picture     = 'https://pu.vk.com/c539223/upload.php?act=proxy_img&url=http%3A%2F%2Fwww.inmyroom.ru%2Flanding%2Fmtsazbukaremonta%2Fimages%2Fshare.jpg&hash=fb6d7f01cb7ca4a7af89a977b035cb27'
       params.description = 'Хотите обновить интерьер и ждете впечатляющие результаты в короткие сроки? Чтобы ремонт не затягивался, важно предусмотреть всё. Воспользуйтесь списками дел и рекомендациями профессионалов.'
 
       url = 'https://www.facebook.com/dialog/feed?' + $.param(params)
 
     if type == 'vk'
-      url = "http://vk.com/share.php?" + $.param(url: 'http://promostaging.inmyroom.ru', title: 'АЗБУКА РЕМОНТА', description: 'Хотите обновить интерьер и ждете впечатляющие результаты в короткие сроки? Чтобы ремонт не затягивался, важно предусмотреть всё. Воспользуйтесь списками дел и рекомендациями профессионалов.', image: 'http://ideal.kitchenmag.ru/assets/q3.jpg') 
+      url = "http://vk.com/share.php?" + $.param(url: 'http://promostaging.inmyroom.ru', title: 'АЗБУКА РЕМОНТА', description: 'Хотите обновить интерьер и ждете впечатляющие результаты в короткие сроки? Чтобы ремонт не затягивался, важно предусмотреть всё. Воспользуйтесь списками дел и рекомендациями профессионалов.', image: 'https://pu.vk.com/c539223/upload.php?act=proxy_img&url=http%3A%2F%2Fwww.inmyroom.ru%2Flanding%2Fmtsazbukaremonta%2Fimages%2Fshare.jpg&hash=fb6d7f01cb7ca4a7af89a977b035cb27') 
       
     if type == 'ok'
       url = "https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&service=odnoklassniki&st.shareUrl='http://promostaging.inmyroom.ru'"

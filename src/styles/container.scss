@@ -1,9 +1,17 @@
 .container {
-  width: 980px;
+  width: 1000px;
   margin: 0 auto;
 }
 
-.section-flat-plan,
+.section {
+  overflow: scroll;
+}
+
+.section-flat-plan {
+  min-height: 100vh;
+  padding: 140px 0;
+}
+
 .section-room {
   min-height: 578px;
 }
@@ -64,7 +72,7 @@
   width: 100%;
   background-color: #0082c5;
 
-  a {
+  img {
     float: right;
     margin-top: -90px;
   }

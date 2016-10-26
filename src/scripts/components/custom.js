@@ -26,12 +26,12 @@ Component.define('custom', {
 
   createCustomTask: function() {
     if (this.isChanged == true) {
-      this.plus.parent().parent().append('<div class="form-row new-checkbox" data-component="custom"><div class="plus js-customPlus"></div><input class="text js-customInput" type="text" placeholder="Добавьте свою задачу"></div>');
-      this.plus.parent().addClass('is-checked');
+      this.plus.parent().before('<div class="form-row is-checked"><input class="checkbox" checked type="checkbox"><input class="text new" type="text" value="' + this.task + '"></div>');
       this.plus.closest('.repairs-tab').addClass('is-checked');
       this.plus.closest('.repairs-tabs').addClass('is-checked');
-      this.plus.parent().html('<input class="checkbox" checked type="checkbox"><input class="text new" type="text" value="' + this.task + '">');
-      Component.vitalize();
+      this.plus.css({'cursor': 'default', 'opacity': 0.3});
+      this.input.val("");
+      this.input.isChanged = fasle;
     }
   },
 
@@ -49,6 +49,26 @@ Component.define('custom', {
 });
 
 $(document).ready(function() {
+
+  $('#fullpage').fullpage({
+    anchors:['main-anchor', 'rooms-anchor', 'tasks-anchor', 'ideas-anchor', 'tech-anchor'],
+    scrollOverflow: false,
+    verticalCentered: false,
+    lockAnchors: true,
+    afterLoad: function(a, b) {
+      if (b == 3 || b == 4) {
+        $.fn.fullpage.setAutoScrolling(false);
+        var top = $(this).offset().top;
+        console.log(top);
+        var bottom = top + ($(this).next().offset().top - top);
+        console.log(bottom);
+      } else {
+        $.fn.fullpage.setAutoScrolling(true);
+      }
+    }
+
+  });
+
   $('.checkbox').click(function() {
     if ($(this).prop('checked')) {
       $(this).parent().addClass('is-checked');
@@ -58,6 +78,17 @@ $(document).ready(function() {
       $(this).parent().removeClass('is-checked');
       $(this).closest('.repairs-tab').removeClass('is-checked');
       $(this).closest('.repairs-tabs').removeClass('is-checked');
+    }
+  });
+
+  $('a').click(function() {
+    if ($(this).attr('href').match(/#/) == "#") {
+      event.preventDefault();
+
+      var id = $(this).attr('href');
+      var top = $(id).offset().top;
+
+      $('body, html').animate({scrollTop: top}, 1500);
     }
   });
 });
