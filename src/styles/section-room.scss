@@ -1,5 +1,6 @@
 .section-room {
   vertical-align: top;
+  text-align: right;
 }
 
 img.section-room_desc {
@@ -14,6 +15,7 @@ img.section-room_desc {
   width: 490px;
   font-size: 15px;
   line-height: 20px;
+  text-align: left;
 }
 
 .room-descriptions {
@@ -21,6 +23,7 @@ img.section-room_desc {
   margin-bottom: 25px;
   min-height: 100px;
   transition: all 0.2s;
+  text-align: center;
 }
 
 .room-description {

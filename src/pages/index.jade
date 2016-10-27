@@ -18,6 +18,8 @@ html.no-js(lang='')
     main
       #fullpage
         .section.section-main(data-anchor="main-anchor")
+          div.section-main_gray(data-0="background-position-y: 60px;" data-800="background-position-y: -20px;")
+          div.section-main_valik(data-0="background-position-y: 300px;" data-800="background-position-y: 500px")
           .container
             header.header
               .container
@@ -48,27 +50,18 @@ html.no-js(lang='')
           .container
             ul.section-list
               li.is-current
-                .title ВЫБОР КОМНАТЫ
+                a.title(href="#rooms") ВЫБОР КОМНАТЫ
                 .desc Выберите комнату, в которой вы хотите сделать ремонт
               li
                 a.title(href="#tasklist") СПИСОК ДЕЛ
+                .desc Отметьте в списке, что вам может понадобиться при ремонте
               li
                 a.title(href="#ideas") ПОИСК ИДЕЙ
+                .desc Вдохновляйтесь идеями ремонта и полезными советами
               li
                 a.title(href="#tech") УМНЫЕ ТЕХНОЛОГИИ
-            //- .flat-plan
-            //-   .room.hall(onclick='ga("send", "event", "plan", "hall");', data-room='Прихожая')
-            //-     span Прихожая
-            //-   .room.sittingroom(onclick='ga("send", "event", "plan", "sittingroom");', data-room='Гостиная')
-            //-     span Гостиная
-            //-   .room.childrens-room(onclick='ga("send", "event", "plan", "nursery");', data-room='Детская')
-            //-     span Детская
-            //-   .room.bathroom(onclick='ga("send", "event", "plan", "bathroom");', data-room='Ванная')
-            //-     span Ванная
-            //-   .room.kitchen(onclick='ga("send", "event", "plan", "kitchen");', data-room='Кухня')
-            //-     span Кухня
-            //-   .room.bedroom(onclick='ga("send", "event", "plan", "bedroom");', data-room='Спальня')
-            //-     span Спальня
+                .desc Узнайте все о преимуществах GPON
+
 
             .flat-plan
               a(href="#tasklist")  
@@ -124,18 +117,6 @@ html.no-js(lang='')
               .room-description(data-room='Детская')
                 img.section-room_desc(src="/assets/desc-childrensroom.png")
                 .section-room_desc-text Детская – это по-настоящему уникальная комната. С первых дней жизни маленькие хозяева детских начинают познавать это пространство – смотреть, трогать и пробовать на вкус каждый уголок! Игрушки, рисунки, шаги – в этом мире детства произойдёт больше, чем в любой другой комнате дома! Вот почему здесь должно быть безопасно, светло и очень, очень уютно. Счастливых игр!
-
-            .col.col-left
-              ul.section-list
-                li
-                  a.title(href="#rooms") ВЫБОР КОМНАТЫ
-                li.is-current
-                  .title СПИСОК ДЕЛ
-                  .desc Отметьте в списке, что вам может понадобиться при ремонте
-                li
-                  a.title(href="#ideas") ПОИСК ИДЕЙ
-                li
-                  a.title(href="#tech") УМНЫЕ ТЕХНОЛОГИИ
 
             .col.col-right(data-component='todoList')
               ul.repairs-menu
@@ -1300,35 +1281,12 @@ html.no-js(lang='')
 
         .section.section-ideas(data-anchor="ideas-anchor")
           .container
-            .col.col-left
-              ul.section-list
-                li
-                  a.title(href="#rooms") ВЫБОР КОМНАТЫ
-                li
-                  a.title(href="#tasklist") СПИСОК ДЕЛ
-                li.is-current
-                  .title ПОИСК ИДЕЙ
-                  .desc Вдохновляйтесь идеями ремонта и полезными советами
-                li
-                  a.title(href="#tech") УМНЫЕ ТЕХНОЛОГИИ
             .col.col-right#ideas
 
 
         .section.section-tech(data-anchor="tech-anchor")#tech
           .section-tech_gradient
-            .container
-              .col.col-left
-                ul.section-list
-                  li
-                    a.title(href="#rooms") ВЫБОР КОМНАТЫ
-                  li
-                    a.title(href="#tasklist") СПИСОК ДЕЛ
-                  li
-                    a.title(href="#ideas") ПОИСК ИДЕЙ
-                    
-                  li.is-current
-                    .title УМНЫЕ ТЕХНОЛОГИИ
-                    .desc Узнайте все о преимуществах GPON
+            .container  
 
               .section_infoblock.section-tech_infoblock
                 h1 гид по gpon
@@ -1346,4 +1304,4 @@ html.no-js(lang='')
 
 
     script(src='/assets/templates.js')
-    script(src='/assets/main.js')   
+    script(src='/assets/main.js')

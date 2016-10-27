@@ -3,10 +3,6 @@
   margin: 0 auto;
 }
 
-.section {
-  overflow: scroll;
-}
-
 .section-flat-plan {
   min-height: 100vh;
   padding: 140px 0;
@@ -34,6 +30,11 @@
   }
 }
 
+.section-ideas {
+  padding-bottom: 60px;
+  text-align: right;
+}
+
 .section-tech {
   min-height: 100vh;
   background-image: url(/assets/tech-bg.jpg);
@@ -59,7 +60,6 @@
 }
 
 .section-tech_gradient {
-  width: 100%;
   height: 100vh;
   background: linear-gradient(90deg, #f4f4f4, transparent);
 }

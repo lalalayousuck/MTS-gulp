@@ -1,21 +1,56 @@
 .section-main {
-
   padding: 100px 0;
   // position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
+  overflow: hidden;
   background-image: url("/assets/grey-brush-main2.png"), linear-gradient(90deg, #c6e2e9, #edf4ec);
   background-position: center bottom;
   background-repeat: no-repeat;
+}
 
-  &:before {
-    @include icon(grey-brush-main);
-    position: absolute;
-    top: 52px;
-    left: 50%;
-    margin-left: -900px;
-  }
+.section-main_gray,
+.section-main_valik {
+  position: absolute;
+  transition: all 0.2s;
+}
+
+// .section-main {
+//   padding: 100px 0;
+//   // position: relative;
+//   min-height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   overflow: hidden;
+//   background-image: url("/assets/valik.png"), url("/assets/grey-brush-main.png") ,url("/assets/grey-brush-main2.png"), linear-gradient(90deg, #c6e2e9, #edf4ec);
+//   background-position: 85% center, center 60px, center bottom, center top;
+//   background-repeat: no-repeat;
+// }
+
+// .section-main_gray,
+// .section-main_valik {
+//   position: absolute;
+//   transition: all 0.2s;
+//   display: none;
+// }
+
+.section-main_gray {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-image: url('/assets/grey-brush-main.png');
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+}
+
+.section-main_valik {
+  width: 449px;
+  height: 100%;
+  background-image: url('/assets/valik.png');
+  left: 60%;
+  background-repeat: no-repeat;
+  background-position-y: 300px; 
 }
 
 .section_infoblock {
@@ -52,13 +87,6 @@
     top: -40px;
     left: -47px;
     z-index: -1;
-  }
-
-  &:after {
-    @include icon(valik);
-    position: absolute;
-    top: 110px;
-    right: -610px;
   }
 }
 

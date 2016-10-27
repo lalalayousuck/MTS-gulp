@@ -2,10 +2,22 @@
   display: inline-block;
   margin-left: 50px;
   width: 272px;
+  transition: all 0.2s;
+
+  &.is-invisible {
+    opacity: 0;
+  }
+
+  &.is-fixed {
+    position: fixed;
+    top: 28%;
+    left: 14%;
+  }
 
   li {
     position: relative;
     margin-bottom: 30px;
+    min-height: 21px;
 
     .title {
       font-size: 17px;
@@ -26,6 +38,8 @@
       letter-spacing: 1px;
       line-height: 20px;
       color: #333333;
+      transition: all 0.3s;
+      display: none;
     }
 
     &:before {
@@ -54,8 +68,13 @@
     }
 
     &.is-current {
+
       &:before {
         color: #e5242c;
+      }
+      
+      .desc {
+        display: block;
       }
 
       &:after {

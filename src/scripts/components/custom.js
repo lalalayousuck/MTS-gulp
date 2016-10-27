@@ -50,29 +50,58 @@ Component.define('custom', {
 
 $(document).ready(function() {
 
-  $('#fullpage').fullpage({
-    anchors:['main-anchor', 'rooms-anchor', 'tasks-anchor', 'ideas-anchor', 'tech-anchor'],
-    scrollOverflow: false,
-    verticalCentered: false,
-    lockAnchors: true,
-    afterLoad: function(anchor, index) {
-      if (index == 3 || index == 4) {
-        $.fn.fullpage.setAutoScrolling(false);
-        var top = $(this).offset().top;
-        console.log(top);
-        var bottom = top + ($(this).next().offset().top - top);
-        console.log(bottom);
-      }
-    },
-    onLeave: function(index, nextIndex, direction) {
-      if (index == 3 || index == 4 && nextIndex == 3 || nextIndex == 4 ) {
-        console.log ('ok');
-      } else {
-        $.fn.fullpage.setAutoScrolling(true);
-      }
-    }
+  // $('#fullpage').fullpage({
+  //   anchors:['main-anchor', 'rooms-anchor', 'tasks-anchor', 'ideas-anchor', 'tech-anchor'],
+  //   scrollOverflow: false,
+  //   verticalCentered: false,
+  //   lockAnchors: true,
+  //   afterLoad: function(anchor, index) {
+  //     if (index == 3 || index == 4) {
+  //       $.fn.fullpage.setAutoScrolling(false);
+  //       var top = $(this).offset().top;
+  //       console.log(top);
+  //       var bottom = top + ($(this).next().offset().top - top);
+  //       console.log(bottom);
+  //     }
+  //   },
+  //   onLeave: function(index, nextIndex, direction) {
+  //     if (index == 3 || index == 4 && nextIndex == 3 || nextIndex == 4 ) {
+  //       console.log ('ok');
+  //     } else if (index == 3 || index == 4 && nextIndex == 2 || nextIndex == 5 ) {
+  //       $.fn.fullpage.setAutoScrolling(true);
+  //     } else if (index == 1) {
+  //       parallaxScroll();
+  //     }
+  //   }
 
+  // });
+
+  $(window).bind('scroll',function(e){
+    var scrolled = $(window).scrollTop();
+    parallaxScroll();
+    fixedTopPosition = $('#rooms').offset().top;
+    if (scrolled >= $('#rooms').offset().top) {
+      $('.section-list').addClass('is-fixed');
+    } else if (scrolled < $('#rooms').offset().top) {
+      $('.section-list').removeClass('is-fixed');
+    };
+
+    if (scrolled >= ($('#tasklist').offset().top - 650) && scrolled <= ($('#tasklist').offset().top - 100)) {
+      $('.section-list').addClass('is-invisible');
+    } else {
+      $('.section-list').removeClass('is-invisible');
+    };
+
+    if (scrolled >= ($('#tasklist').offset().top - 350)) {
+
+    }
   });
+
+  function parallaxScroll(){
+    // var scrolled = $(window).scrollTop();
+    // $('.section-main_gray').css('top',(60-(scrolled / 8))+'px');
+    // $('.section-main_valik').css('top',(300+(scrolled / 3))+'px');
+  }
 
   $('.checkbox').click(function() {
     if ($(this).prop('checked')) {
@@ -93,7 +122,7 @@ $(document).ready(function() {
       var id = $(this).attr('href');
       var top = $(id).offset().top;
 
-      $('body, html').animate({scrollTop: top}, 1500);
+      $('body, html').animate({scrollTop: top}, 2000);
     }
   });
 });
