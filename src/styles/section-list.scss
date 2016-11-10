@@ -1,26 +1,16 @@
 .section-list {
   display: inline-block;
   margin-left: 50px;
-  width: 272px;
+  width: 80%;
   transition: all 0.2s;
-
-  &.is-invisible {
-    opacity: 0;
-  }
-
-  &.is-fixed {
-    position: fixed;
-    top: 28%;
-    left: 14%;
-  }
 
   li {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     min-height: 21px;
 
     .title {
-      font-size: 17px;
+      font-size: 15px;
       font-weight: 700;
     }
 
@@ -39,7 +29,6 @@
       line-height: 20px;
       color: #333333;
       transition: all 0.3s;
-      display: none;
     }
 
     &:before {
@@ -47,7 +36,7 @@
       position: absolute;
       top: -2px;
       left: -50px;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
     }
 
@@ -69,21 +58,21 @@
 
     &.is-current {
 
+      &:hover a {
+        color: black;
+      }
+
       &:before {
         color: #e5242c;
-      }
-      
-      .desc {
-        display: block;
       }
 
       &:after {
         display: block;
         position: absolute;
         content: "—";
-        top: -4px;
+        top: 0;
         left: -26px;
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 700;
       }
     }
@@ -96,6 +85,7 @@
 
 .section-flat-plan .section-list {
   margin-top: 125px;
+  width: 38%;
 }
 
 .section-room .section-list {
@@ -103,5 +93,46 @@
 }
 
 .section-ideas .section-list {
-  margin-top: 100px;
+  margin-top: 150px;
+}
+
+@media screen and (min-width: 960px) {
+  .section-list {
+    margin-left: 50px;
+    width: 272px;
+
+    li {
+      margin-bottom: 30px;
+
+      .title {
+        font-size: 19px;
+      }
+
+      .desc {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      &:before {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .section-tech .section-list {
+    margin-top: 40%;
+  }
+
+  .section-flat-plan .section-list {
+    margin-top: 125px;
+    width: 272px;
+  }
+
+  .section-room .section-list {
+    margin-top: 60px;
+  }
+
+  .section-ideas .section-list {
+    margin-top: 150px;
+  }
 }

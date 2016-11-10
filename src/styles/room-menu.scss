@@ -3,14 +3,8 @@
   margin-top: 10px;
   height: 35px;
   text-align: center;
+  border-bottom: 1px solid #f0f0f0;
 
-  &:after {
-    @include icon(grey-line);
-    position: absolute;
-    top: 31px;
-    left: 58px;
-    z-index: -1;
-  }
 
   li {
     display: inline-block;
@@ -27,6 +21,20 @@
     
     &.is-active {
       border-bottom: 2px solid #e5242c;
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .room-menu {
+    border-bottom: none;
+
+    &:after {
+      @include icon(grey-line);
+      position: absolute;
+      top: 31px;
+      left: 58px;
+      z-index: -1;
     }
   }
 }

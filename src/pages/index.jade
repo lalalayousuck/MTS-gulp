@@ -11,7 +11,7 @@ html.no-js(lang='')
     meta(property='og:description', content='спланируй свой ремонт от А до Я')
     meta(property='og:image', content='http://www.inmyroom.ru/landing/mtsazbukaremonta/images/share.jpg')
     title Азбука ремонта от МТС
-    link(rel="stylesheet" href="/assets/main.css")
+    link(rel="stylesheet" href="./assets/main.css")
     link(href='./assets/favicon.png', rel='shortcut icon', type='image/vnd.microsoft.icon')
   body
     
@@ -26,7 +26,7 @@ html.no-js(lang='')
                 ul
                   li
                     a(href='http://www.inmyroom.ru')
-                      img(src="/assets/imr-logo.png")
+                      img(src="./assets/imr-logo.png")
                   li
                     a(href='http://www.inmyroom.ru/my/feed') Моя лента
                   li
@@ -40,83 +40,105 @@ html.no-js(lang='')
                   li
                     a(href='http://www.inmyroom.ru/profi') Профи
                   li
-                    img(src='/assets/mts_header_logo.png')
+                    img(src='./assets/mts_header_logo.png')
             .section_infoblock.section-main_infoblock
               .section_pretitle спецпроект
               h1 азбука ремонта
-              .section_desc Хотите обновить интерьер и ждете впечатляющие результаты в короткие сроки? Чтобы ремонт не затягивался, важно предусмотреть всё. Воспользуйтесь списками дел и рекомендациями профессионалов.
+              .section_desc Чтобы ремонт не затягивался, важно предусмотреть всё. Воспользуйтесь списками дел и рекомендациями профессионалов.
             a.section-main_down(href='#rooms') ЛИСТАЙТЕ ВНИЗ
         .section.section-flat-plan(data-anchor="rooms-anchor")#rooms
           .container
             ul.section-list
               li.is-current
-                a.title(href="#rooms") ВЫБОР КОМНАТЫ
+                a.title ВЫБОР КОМНАТЫ
                 .desc Выберите комнату, в которой вы хотите сделать ремонт
               li
                 a.title(href="#tasklist") СПИСОК ДЕЛ
-                .desc Отметьте в списке, что вам может понадобиться при ремонте
+
               li
                 a.title(href="#ideas") ПОИСК ИДЕЙ
-                .desc Вдохновляйтесь идеями ремонта и полезными советами
+
               li
                 a.title(href="#tech") УМНЫЕ ТЕХНОЛОГИИ
-                .desc Узнайте все о преимуществах GPON
-
 
             .flat-plan
               a(href="#tasklist")  
-                .room.hall(data-room='Прихожая').is-active
+                .room.hall(onclick='ga("send", "event", "plan", "hall");', data-room='Прихожая').is-active
                   span Прихожая
               a(href="#tasklist")  
-                .room.sittingroom(data-room='Гостиная')
+                .room.sittingroom(onclick='ga("send", "event", "plan", "sittingroom");', data-room='Гостиная')
                   span Гостиная
               a(href="#tasklist")  
-                .room.childrens-room(data-room='Детская')
+                .room.childrens-room(onclick='ga("send", "event", "plan", "nursery");', data-room='Детская')
                   span Детская
               a(href="#tasklist")  
-                .room.bathroom(data-room='Ванная')
+                .room.bathroom(onclick='ga("send", "event", "plan", "bathroom");', data-room='Ванная')
                   span Ванная
               a(href="#tasklist")  
-                .room.kitchen(data-room='Кухня')
+                .room.kitchen(onclick='ga("send", "event", "plan", "kitchen");', data-room='Кухня')
                   span Кухня
               a(href="#tasklist")  
-                .room.bedroom(data-room='Спальня')
+                .room.bedroom(onclick='ga("send", "event", "plan", "bedroom");', data-room='Спальня')
                   span Спальня
 
         .section.section-room(data-anchor="tasks-anchor")#tasklist
           .container
             ul.room-menu
-              li(data-room='Кухня') Кухня
-              li(data-room='Гостиная') Гостиная
-              li(data-room='Спальня') Спальная комната
-              li(data-room='Ванная') Ванная комната
-              li.is-active(data-room='Прихожая') Прихожая
-              li(data-room='Детская') Детская
+              li(onclick='ga("send", "event", "plan", "kitchen");', data-room='Кухня') Кухня
+              li(onclick='ga("send", "event", "plan", "sittingroom");', data-room='Гостиная') Гостиная
+              li(onclick='ga("send", "event", "plan", "bedroom");', data-room='Спальня') Спальная комната
+              li(onclick='ga("send", "event", "plan", "bathroom");', data-room='Ванная') Ванная комната
+              li.is-active(onclick='ga("send", "event", "plan", "hall");', data-room='Прихожая') Прихожая
+              li(onclick='ga("send", "event", "plan", "nursery");', data-room='Детская') Детская
                 
             .room-descriptions
               .room-description(data-room='Кухня')
-                img.section-room_desc(src="/assets/desc-kitchen.png")
-                .section-room_desc-text Без сомнения, «сердце» дома – это его кухня, источник вкусной еды и манящих запахов, а также, в отсутствие столовой, место основного сбора всех домочадцев. Это помещение как никакое другое обязано сочетать в себе всё сразу – сложную технику и уютное пространство, зоны работы и отдыха, а также безопасность и комфорт каждого члена семьи.
+                .col.col-left
+                  img.section-room_desc(src="./assets/desc-kitchen.png")
+                .col.col-right
+                  .section-room_desc-text Без сомнения, «сердце» дома – это его кухня, источник вкусной еды и манящих запахов, а также, в отсутствие столовой, место основного сбора всех домочадцев. Это помещение как никакое другое обязано сочетать в себе всё сразу – сложную технику и уютное пространство, зоны работы и отдыха, а также безопасность и комфорт каждого члена семьи.
 
               .room-description(data-room='Гостиная')
-                img.section-room_desc(src="/assets/desc-guestroom.png")
-                .section-room_desc-text Из места, которое раньше служило, в основном, для приёма гостей, современная гостиная превратилась в пространство для отдыха, которое лишь иногда «открывает свои двери» для других людей. Телевизор (или камин!), мягкий диван (и его подушки!) – вот, пожалуй, и всё, что объединяет между собой гостиные мира. В остальном гостиная – это комната, в которой ярче всего может расправить крылья полет дизайнерской фантазии.
+                .col.col-left
+                  img.section-room_desc(src="./assets/desc-guestroom.png")
+                .col.col-right
+                  .section-room_desc-text Из места, которое раньше служило, в основном, для приёма гостей, современная гостиная превратилась в пространство для отдыха, которое лишь иногда «открывает свои двери» для других людей. Телевизор (или камин!), мягкий диван (и его подушки!) – вот, пожалуй, и всё, что объединяет между собой гостиные мира. В остальном гостиная – это комната, в которой ярче всего может расправить крылья полет дизайнерской фантазии.
 
               .room-description(data-room='Спальня')
-                img.section-room_desc(src="/assets/desc-bedroom.png")
-                .section-room_desc-text Самое интимное и по-настоящему личное пространство квартиры, спальня считается местом для максимального отдыха и расслабления. Тишина, пространство и покой – вот три «столпа», без которых невозможно представить ни одну спальню. Атмофосферу задаёт приглушенное освещение, мягкие цвета и фактуры, а ещё – индивидуальные дизайнерские предпочтения хозяев спальни, которым должно быть комфортно в своём личном пространстве.
+                .col.col-left
+                  img.section-room_desc(src="./assets/desc-bedroom.png")
+                .col.col-right
+                  .section-room_desc-text Самое интимное и по-настоящему личное пространство квартиры, спальня считается местом для максимального отдыха и расслабления. Тишина, пространство и покой – вот три «столпа», без которых невозможно представить ни одну спальню. Атмофосферу задаёт приглушенное освещение, мягкие цвета и фактуры, а ещё – индивидуальные дизайнерские предпочтения хозяев спальни, которым должно быть комфортно в своём личном пространстве.
 
               .room-description(data-room='Ванная')
-                img.section-room_desc(src="/assets/desc-bath.png")
-                .section-room_desc-text Самая функциональная комната – ванная комната. И, чаще всего, самая маленькая! На нескольких метрах пространства должна быть продумана каждая деталь – но если всё «собрано» правильно, то эта комната подарит каждому жителю дома массу приятных моментов.
+                .col.col-left
+                  img.section-room_desc(src="./assets/desc-bath.png")
+                .col.col-right
+                  .section-room_desc-text Самая функциональная комната – ванная комната. И, чаще всего, самая маленькая! На нескольких метрах пространства должна быть продумана каждая деталь – но если всё «собрано» правильно, то эта комната подарит каждому жителю дома массу приятных моментов.
 
               .room-description(data-room='Прихожая').is-active
-                img.section-room_desc(src="/assets/desc-hall.png")
-                .section-room_desc-text Первое и последнее, что видят гости и хозяева квартиры – это прихожая. Для этого места важнее всего не уют, а функционал – шкаф, чтобы повесить пальто и поставить обувь, полочка для ключей и мелочей, удобный придверный коврик и хорошее освещение!
+                .col.col-left
+                  img.section-room_desc(src="./assets/desc-hall.png")
+                .col.col-right
+                  .section-room_desc-text Первое и последнее, что видят гости и хозяева квартиры – это прихожая. Для этого места важнее всего не уют, а функционал – шкаф, чтобы повесить пальто и поставить обувь, полочка для ключей и мелочей, удобный придверный коврик и хорошее освещение!
 
               .room-description(data-room='Детская')
-                img.section-room_desc(src="/assets/desc-childrensroom.png")
-                .section-room_desc-text Детская – это по-настоящему уникальная комната. С первых дней жизни маленькие хозяева детских начинают познавать это пространство – смотреть, трогать и пробовать на вкус каждый уголок! Игрушки, рисунки, шаги – в этом мире детства произойдёт больше, чем в любой другой комнате дома! Вот почему здесь должно быть безопасно, светло и очень, очень уютно. Счастливых игр!
+                .col.col-left
+                  img.section-room_desc(src="./assets/desc-childrensroom.png")
+                .col.col-right
+                  .section-room_desc-text Детская – это по-настоящему уникальная комната. С первых дней жизни маленькие хозяева детских начинают познавать это пространство – смотреть, трогать и пробовать на вкус каждый уголок! Игрушки, рисунки, шаги – в этом мире детства произойдёт больше, чем в любой другой комнате дома! Вот почему здесь должно быть безопасно, светло и очень, очень уютно. Счастливых игр!
+
+            .col.col-left
+              ul.section-list
+                li
+                  a.title(href="#rooms") ВЫБОР КОМНАТЫ
+                li.is-current
+                  a.title СПИСОК ДЕЛ
+                  .desc Отметьте в списке, что вам может понадобиться при ремонте
+                li
+                  a.title(href="#ideas") ПОИСК ИДЕЙ
+                li
+                  a.title(href="#tech") УМНЫЕ ТЕХНОЛОГИИ
 
             .col.col-right(data-component='todoList')
               ul.repairs-menu
@@ -202,7 +224,7 @@ html.no-js(lang='')
                         input.checkbox(type='checkbox')
                         p
                           | Настроить 
-                          span.paragraph-toggler интерактивное цифровое ТВ
+                          span.paragraph-toggler(onclick='ga("send", "event", "productName", "tv");') интерактивное цифровое ТВ
                         .repairs-tab_desc 
                           | Более 230 телеканалов в превосходном
                           br
@@ -216,7 +238,7 @@ html.no-js(lang='')
                         input.checkbox(type='checkbox')
                         p
                           | Подключить 
-                          span.paragraph-toggler домашний телефон
+                          span.paragraph-toggler(onclick='ga("send", "event", "productName", "phone");') домашний телефон
                         .repairs-tab_desc 
                           | Современный телефон на базе технологии 
                           a(target='_blank', href='http://mgts.ru/home/phone/') GPON
@@ -228,7 +250,7 @@ html.no-js(lang='')
                         input.checkbox(type='checkbox')
                         p
                           | Установить 
-                          span.paragraph-toggler систему видеонаблюдения
+                          span.paragraph-toggler(onclick='ga("send", "event", "productName", "cctv");') систему видеонаблюдения
                         .repairs-tab_desc 
                           | Есть ли еда у домашнего питомца,
                           br
@@ -398,7 +420,7 @@ html.no-js(lang='')
                         input.checkbox(type='checkbox')
                         p
                           | Установить 
-                          span.paragraph-toggler систему видеонаблюдения
+                          span.paragraph-toggler(onclick='ga("send", "event", "productName", "cctv");') систему видеонаблюдения
                         .repairs-tab_desc 
                           | Есть ли еда у домашнего питомца,
                           br
@@ -414,7 +436,7 @@ html.no-js(lang='')
                         input.checkbox(type='checkbox')
                         p
                           | Настроить 
-                          span.paragraph-toggler интерактивное цифровое ТВ
+                          span.paragraph-toggler(onclick='ga("send", "event", "productName", "tv");') интерактивное цифровое ТВ
                         .repairs-tab_desc 
                           | Более 230 телеканалов в превосходном
                           br
@@ -428,7 +450,7 @@ html.no-js(lang='')
                         input.checkbox(type='checkbox')
                         p
                           | Провести 
-                          span.paragraph-toggler интернет
+                          span.paragraph-toggler(onclick='ga("send", "event", "productName", "gpon");') интернет
                         .repairs-tab_desc 
                           | Безлимитный доступ в Интернет
                           br
@@ -444,7 +466,7 @@ html.no-js(lang='')
                         input.checkbox(type='checkbox')
                         p
                           | Подключить 
-                          span.paragraph-toggler домашний телефон
+                          span.paragraph-toggler(onclick='ga("send", "event", "productName", "phone");') домашний телефон
                         .repairs-tab_desc 
                           | Современный телефон на базе технологии 
                           a(target='_blank', href='http://mgts.ru/home/phone/') GPON
@@ -599,7 +621,7 @@ html.no-js(lang='')
                         input.checkbox(type='checkbox')
                         p
                           | Настроить 
-                          span.paragraph-toggler интерактивное цифровое ТВ
+                          span.paragraph-toggler(onclick='ga("send", "event", "productName", "tv");') интерактивное цифровое ТВ
                         .repairs-tab_desc
                           | Более 230 телеканалов в превосходном
                           br
@@ -613,7 +635,7 @@ html.no-js(lang='')
                         input.checkbox(type='checkbox')
                         p
                           | Провести 
-                          span.paragraph-toggler интернет
+                          span.paragraph-toggler(onclick='ga("send", "event", "productName", "gpon");') интернет
                         .repairs-tab_desc
                           | Безлимитный доступ в Интернет
                           br
@@ -629,7 +651,7 @@ html.no-js(lang='')
                         input.checkbox(type='checkbox')
                         p
                           | Подключить 
-                          span.paragraph-toggler домашний телефон
+                          span.paragraph-toggler(onclick='ga("send", "event", "productName", "phone");') домашний телефон
                         .repairs-tab_desc
                           | Современный телефон на базе технологии 
                           a(target='_blank', href='http://mgts.ru/home/phone/') GPON
@@ -937,7 +959,7 @@ html.no-js(lang='')
                         input.checkbox(type='checkbox')
                         p
                           | Установить 
-                          span.paragraph-toggler систему видеонаблюдения
+                          span.paragraph-toggler(onclick='ga("send", "event", "productName", "cctv");') систему видеонаблюдения
                         .repairs-tab_desc
                           | Есть ли еда у домашнего питомца,
                           br
@@ -953,7 +975,7 @@ html.no-js(lang='')
                         input.checkbox(type='checkbox')
                         p
                           | Подключить 
-                          span.paragraph-toggler домашний телефон
+                          span.paragraph-toggler(onclick='ga("send", "event", "productName", "phone");') домашний телефон
                         .repairs-tab_desc
                           | Современный телефон на базе технологии 
                           a(target='_blank', href='http://mgts.ru/home/phone/') GPON
@@ -1132,7 +1154,7 @@ html.no-js(lang='')
                         input.checkbox(type='checkbox')
                         p
                           | Установить 
-                          span.paragraph-toggler систему видеонаблюдения
+                          span.paragraph-toggler(onclick='ga("send", "event", "productName", "cctv");') систему видеонаблюдения
                         .repairs-tab_desc
                           | Есть ли еда у домашнего питомца,
                           br
@@ -1148,7 +1170,7 @@ html.no-js(lang='')
                         input.checkbox(type='checkbox')
                         p
                           | Провести 
-                          span.paragraph-toggler интернет
+                          span.paragraph-toggler(onclick='ga("send", "event", "productName", "gpon");') интернет
                         .repairs-tab_desc
                           | Безлимитный доступ в Интернет
                           br
@@ -1164,7 +1186,7 @@ html.no-js(lang='')
                         input.checkbox(type='checkbox')
                         p
                           | Настроить 
-                          span.paragraph-toggler интерактивное цифровое ТВ
+                          span.paragraph-toggler(onclick='ga("send", "event", "productName", "tv");') интерактивное цифровое ТВ
                         .repairs-tab_desc
                           | Более 230 телеканалов в превосходном
                           br
@@ -1178,7 +1200,7 @@ html.no-js(lang='')
                         input.checkbox(type='checkbox')
                         p
                           | Подключить 
-                          span.paragraph-toggler домашний телефон
+                          span.paragraph-toggler(onclick='ga("send", "event", "productName", "phone");') домашний телефон
                         .repairs-tab_desc
                           | Современный телефон на базе технологии 
                           a(target='_blank', href='http://mgts.ru/home/phone/') GPON
@@ -1281,27 +1303,48 @@ html.no-js(lang='')
 
         .section.section-ideas(data-anchor="ideas-anchor")
           .container
+            .col.col-left
+              ul.section-list
+                li
+                  a.title(href="#rooms") ВЫБОР КОМНАТЫ
+                li
+                  a.title(href="#tasklist") СПИСОК ДЕЛ
+                li.is-current
+                  a.title ПОИСК ИДЕЙ
+                  .desc Вдохновляйтесь идеями ремонта и полезными советами
+                li
+                  a.title(href="#tech") УМНЫЕ ТЕХНОЛОГИИ
             .col.col-right#ideas
 
 
         .section.section-tech(data-anchor="tech-anchor")#tech
           .section-tech_gradient
             .container  
+              .col.col-left
+                ul.section-list
+                  li
+                    a.title(href="#rooms") ВЫБОР КОМНАТЫ
+                  li
+                    a.title(href="#tasklist") СПИСОК ДЕЛ
+                  li
+                    a.title(href="#ideas") ПОИСК ИДЕЙ
+                  li.is-current
+                    a.title УМНЫЕ ТЕХНОЛОГИИ
+                    .desc Узнайте все о преимуществах GPON
 
-              .section_infoblock.section-tech_infoblock
+              a(href="https://www.inmyroom.ru/posts/13543?token=ce4f1895504873bc835c8abf18122a68").section_infoblock.section-tech_infoblock
                 h1 гид по gpon
                 h2 Умные технологии для вашего дома
-                a(href="https://www.inmyroom.ru/posts/13543?token=ce4f1895504873bc835c8abf18122a68")
-                  .btn.btn-gpon Посмотреть
+                .btn-text Читать дальше
 
-          a(href="https://www.inmyroom.ru/posts/13543?token=ce4f1895504873bc835c8abf18122a68")  
-            .section-gpon
-              .container
-                .section-gpon_title GPON - оптика до квартиры
-                img(src="/assets/logo-mgts.png")  
+        a(href="https://www.inmyroom.ru/posts/13543?token=ce4f1895504873bc835c8abf18122a68").footer-link  
+          .section-gpon
+            .container
+              .section-gpon_title GPON - оптика до квартиры
+              img(src="./assets/logo-mgts.png")  
 
                 
 
 
-    script(src='/assets/templates.js')
-    script(src='/assets/main.js')
+    script(src='./assets/templates.js')
+    script(src='./assets/main.js')

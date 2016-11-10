@@ -5,6 +5,7 @@
   right: 0;
   height: 76px;
   vertical-align: middle;
+  padding: 0 10px;
 
   li {
     display: inline-block;
@@ -35,4 +36,10 @@
       float: right;
     }
   }    
+}
+
+@media screen and (min-width: 960px) {
+  .header {
+    padding: 0;
+  }
 }

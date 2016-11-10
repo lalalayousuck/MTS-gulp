@@ -5,11 +5,10 @@ attachFastClick = require('fastclick')
 
 data = require('./data/posts')
 
-require('./lib/fullpage')
 skrollr = require('./lib/skrollr')
-# require('./lib/skrollr.menu.min')
 
 
+ga = require('./ga')
 require('./lib/component')
 require('./components/share-btn')
 require('./components/custom')
@@ -20,8 +19,6 @@ attachFastClick(document.body)
 $(document).ready ->
 
   skrollr.init()
-
-  # skrollr.menu.init(s)
 
   Component.vitalize()
 

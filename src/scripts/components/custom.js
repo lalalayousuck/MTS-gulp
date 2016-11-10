@@ -76,32 +76,26 @@ $(document).ready(function() {
 
   // });
 
-  $(window).bind('scroll',function(e){
-    var scrolled = $(window).scrollTop();
-    parallaxScroll();
-    fixedTopPosition = $('#rooms').offset().top;
-    if (scrolled >= $('#rooms').offset().top) {
-      $('.section-list').addClass('is-fixed');
-    } else if (scrolled < $('#rooms').offset().top) {
-      $('.section-list').removeClass('is-fixed');
-    };
+  // $(window).bind('scroll',function(e){
+  //   var scrolled = $(window).scrollTop();
+  //   parallaxScroll();
+  //   fixedTopPosition = $('#rooms').offset().top;
+  //   if (scrolled >= $('#rooms').offset().top) {
+  //     $('.section-list').addClass('is-fixed');
+  //   } else if (scrolled < $('#rooms').offset().top) {
+  //     $('.section-list').removeClass('is-fixed');
+  //   };
 
-    if (scrolled >= ($('#tasklist').offset().top - 650) && scrolled <= ($('#tasklist').offset().top - 100)) {
-      $('.section-list').addClass('is-invisible');
-    } else {
-      $('.section-list').removeClass('is-invisible');
-    };
+  //   if (scrolled >= ($('#tasklist').offset().top - 650) && scrolled <= ($('#tasklist').offset().top - 100)) {
+  //     $('.section-list').addClass('is-invisible');
+  //   } else {
+  //     $('.section-list').removeClass('is-invisible');
+  //   };
 
-    if (scrolled >= ($('#tasklist').offset().top - 350)) {
+  //   if (scrolled >= ($('#tasklist').offset().top - 350)) {
 
-    }
-  });
-
-  function parallaxScroll(){
-    // var scrolled = $(window).scrollTop();
-    // $('.section-main_gray').css('top',(60-(scrolled / 8))+'px');
-    // $('.section-main_valik').css('top',(300+(scrolled / 3))+'px');
-  }
+  //   }
+  // });
 
   $('.checkbox').click(function() {
     if ($(this).prop('checked')) {
@@ -122,7 +116,7 @@ $(document).ready(function() {
       var id = $(this).attr('href');
       var top = $(id).offset().top;
 
-      $('body, html').animate({scrollTop: top}, 2000);
+      $('body, html').animate({scrollTop: top}, 1000);
     }
   });
 });

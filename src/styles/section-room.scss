@@ -4,16 +4,19 @@
 }
 
 img.section-room_desc {
-  margin: 0 80px 0 100px;
-  width: 200px;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 200px;
   vertical-align: top;
+  margin-top: 20px;
+  margin-left: 10%;
 }
 
 .section-room_desc-text {
   display: inline-block;
   margin: 51px 0 20px;
-  width: 490px;
-  font-size: 15px;
+  width: 90%;
+  font-size: 16px;
   line-height: 20px;
   text-align: left;
 }
@@ -37,5 +40,18 @@ img.section-room_desc {
     opacity: 1;
     visibility: visible;
     z-index: +1;
+  }
+}
+
+
+@media screen and (min-width: 960px) {
+  img.section-room_desc {
+    margin: 0 80px 0 100px;
+    width: 200px;
+  }
+
+  .section-room_desc-text {
+    margin: 51px 0 20px;
+    width: 490px;
   }
 }

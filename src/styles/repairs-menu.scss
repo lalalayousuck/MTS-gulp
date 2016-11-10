@@ -1,7 +1,7 @@
 .repairs-menu {
   display: inline-block;
   margin-bottom: 33px;
-  width: 570px;
+  max-width: 370px;
 
   li {
     display: inline-block;
@@ -9,7 +9,7 @@
     margin: 0 10px 5px 0;
     padding: 4px 6px;
     border: 1px solid #f4f4f4;
-    font-size: 13px;
+    font-size: 14px;
     text-transform: uppercase;
     font-weight: 200;
     cursor: pointer;
@@ -31,5 +31,11 @@
         color: black;
       }
     }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .repairs-menu {
+    max-width: 570px;
   }
 }

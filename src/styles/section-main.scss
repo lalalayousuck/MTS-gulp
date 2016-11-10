@@ -1,13 +1,11 @@
 .section-main {
-  padding: 100px 0;
-  // position: relative;
   min-height: 100vh;
+  padding: 100px 0;
   display: flex;
-  align-items: center;
-  overflow: hidden;
-  background-image: url("/assets/grey-brush-main2.png"), linear-gradient(90deg, #c6e2e9, #edf4ec);
+  background-image: url("../assets/grey-brush-main2.png"), linear-gradient(90deg, #c6e2e9, #edf4ec);
   background-position: center bottom;
   background-repeat: no-repeat;
+  overflow: visible;
 }
 
 .section-main_gray,
@@ -16,89 +14,21 @@
   transition: all 0.2s;
 }
 
-// .section-main {
-//   padding: 100px 0;
-//   // position: relative;
-//   min-height: 100vh;
-//   display: flex;
-//   align-items: center;
-//   overflow: hidden;
-//   background-image: url("/assets/valik.png"), url("/assets/grey-brush-main.png") ,url("/assets/grey-brush-main2.png"), linear-gradient(90deg, #c6e2e9, #edf4ec);
-//   background-position: 85% center, center 60px, center bottom, center top;
-//   background-repeat: no-repeat;
-// }
-
-// .section-main_gray,
-// .section-main_valik {
-//   position: absolute;
-//   transition: all 0.2s;
-//   display: none;
-// }
-
 .section-main_gray {
   width: 100%;
   height: 100%;
   left: 0;
-  background-image: url('/assets/grey-brush-main.png');
-  background-position-x: 100%;
+  background-image: url('../assets/grey-brush-main.png');
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .section-main_valik {
-  width: 449px;
-  height: 100%;
-  background-image: url('/assets/valik.png');
-  left: 60%;
+  width: 200px;
+  height: 100px;
+  background-image: url('../assets/valik.png');
   background-repeat: no-repeat;
   background-position-y: 300px; 
-}
-
-.section_infoblock {
-  position: relative;
-  width: 440px;
-  padding: 45px 25px 45px 40px;
-  border: 3px solid white;
-  color: white;
-  z-index: +1;
-
-  h1 {
-    font-size: 24px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    line-height: 40px;
-  }
-
-  h2 {
-    font-size: 20px;
-    font-weight: 200;
-  }
-
-  > * {
-    z-index: +3;
-  }
-}
-
-.section-main_infoblock {
-  padding: 45px 0 45px 50px;
-
-  &:before {
-    @include icon(red-brush-main);
-    position: absolute;
-    top: -40px;
-    left: -47px;
-    z-index: -1;
-  }
-}
-
-.section_pretitle { 
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #f39ba0;
-}
-
-.section_desc {
-  font-size: 16px;
-  line-height: 24px;
 }
 
 .section-main_down {
@@ -127,5 +57,103 @@
     transform: rotate(45deg);
     content: "";
     transition: all 0.5s;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .section-main {
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .section-main_gray {
+    background-position-x: 100%;
+  }  
+
+  .section-main_valik {
+    width: 449px;
+    height: 100%;
+    background-image: url('../assets/valik.png');
+    left: 60%;
+    background-repeat: no-repeat;
+    background-position-y: 300px; 
+  }
+
+  .section_infoblock {
+    position: relative;
+    width: 440px;
+    padding: 45px 25px 45px 40px;
+    border: 3px solid white;
+    color: white;
+    z-index: +1;
+
+    h1 {
+      font-size: 34px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      line-height: 40px;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 200;
+    }
+
+    > * {
+      z-index: +3;
+    }
+  }
+
+  .section-main_infoblock {
+    padding: 40px 0 45px 50px;
+
+    &:before {
+      @include icon(red-brush-main);
+      position: absolute;
+      top: -62px;
+      left: -47px;
+      z-index: -1;
+    }
+  }
+
+  .section_pretitle { 
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #f39ba0;
+  }
+
+  .section_desc {
+    font-size: 19px;
+    line-height: 24px;
+  }
+
+  .section-main_down {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -52px;
+    width: 104px;
+    font-size: 13px;
+    text-align: center;
+    z-index: +1;
+
+    &:hover:before {
+      top: 28px;
+    }
+
+    &:before {
+      position: absolute;
+      display: block;
+      top: 23px;
+      left: 46px;
+      width: 10px;
+      height: 10px;
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+      transform: rotate(45deg);
+      content: "";
+      transition: all 0.5s;
+    }
   }
 }

@@ -9,12 +9,17 @@
     margin-bottom: 0;
   }
 
+  .col-right {
+    float: left;
+  }
+
   .repairs-tabs.is-checked h1 {
     display: block;
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
     margin: 15px 0 15px 8px;
+    color: black;
   }
 
   .repairs-tab.is-checked h2 {
@@ -23,6 +28,7 @@
     line-height: 20px;
     font-weight: 600;
     margin: 15px 0 15px 8px;
+    color: black;
   }
 
   .section-tech,
