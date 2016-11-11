@@ -29,15 +29,16 @@
 
 @media screen and (max-width: 959px) {
   .section-main {
+    position: relative;
+    overflow: hidden;
     background-image: url("../assets/grey-brush-main2_small.png"), linear-gradient(90deg, #c6e2e9, #edf4ec);
     background-position: center 110%;
     background-repeat: no-repeat;
-    overflow: hidden;
 
     &:after {
       @include icon(grey-brush-main_small);
       position: absolute;
-      
+
       top: 130px;
       left: -75px;
     }
@@ -56,7 +57,7 @@
 
     img {
       display: block;
-      margin: 0 auto;
+      //margin: 0 auto;
     }
 
     &:before {
@@ -80,8 +81,10 @@
   .section-main_down {
     display: none;
   }
+}
 
-  .section_infoblock {
+@media screen and (max-width: 767px) {
+ .section_infoblock {
     position: relative;
     display: block;
     width: 262px;
@@ -108,7 +111,7 @@
   }
 
   .section-main_infoblock {
-    margin: 50px auto 105px;
+    margin: 70px auto;
     height: 262px;
     border: 3px solid white;
 
@@ -134,7 +137,8 @@
   }
 }
 
-@media screen and (min-width: 960px) {
+
+@media screen and (min-width: 768px) {
   .section-main {
     min-height: 100vh;
     padding: 100px 0;
@@ -171,7 +175,7 @@
     background-image: url('../assets/valik.png');
     left: 60%;
     background-repeat: no-repeat;
-    background-position-y: 300px; 
+    background-position-y: 300px;
   }
 
   .section_infoblock {
@@ -199,7 +203,9 @@
       z-index: +3;
     }
   }
+}
 
+@media screen and (min-width: 960px) {
   .section-main_infoblock {
     padding: 40px 0 45px 50px;
 
@@ -212,7 +218,7 @@
     }
   }
 
-  .section_pretitle { 
+  .section_pretitle {
     font-size: 18px;
     text-transform: uppercase;
     color: #f39ba0;

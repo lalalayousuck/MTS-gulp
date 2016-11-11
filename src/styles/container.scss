@@ -14,7 +14,7 @@
   padding-left: 10px;
   background-color: #0082c5;
   z-index: +22;
-  
+
 }
 
 .section-gpon_title {
@@ -70,6 +70,10 @@
     }
   }
 
+  .section-flat-plan {
+    padding-top: 10px;
+  }
+
   .section-gpon_title {
     font-size: 20px;
     line-height: 60px;
@@ -79,7 +83,7 @@
     height: auto;
     padding: 0 20px;
   }
-  
+
   .btn-text {
     display: block;
     margin: 10px auto;
@@ -94,6 +98,10 @@
 @media screen and (min-width: 960px) {
   .container {
     width: 1000px;
+  }
+
+  .section-ideas {
+    overflow: hidden;
   }
 
   .section {
@@ -125,7 +133,7 @@
   .section-tech {
     height: 100vh;
     background-image: url(../assets/tech-bg.jpg);
-    background-position-x: center; 
+    background-position-x: center;
     background-size: cover;
   }
 
