@@ -5,7 +5,7 @@
   left: 0;
   z-index: 15;
 
-  @include lp(959) {
+  @include lp(960) {
     padding: 10px;
   }
 
@@ -25,7 +25,7 @@
 }
 
 .header_nav {
-  @include lp(767) {
+  @include lp(768) {
     position: absolute;
     top: 0;
     right: 0;
@@ -60,7 +60,7 @@
 }
 
 .header_nav_link {
-  @include lp(767) {
+  @include lp(768) {
     display: block;
     padding: 15px 22px 16px;
     color: #333;
@@ -71,7 +71,7 @@
 .header_promo-logo {
   display: none;
 
-  @include bp(959) {
+  @include bp(960) {
     display: block;
     float: right;
     margin: -12px 0 0 0;

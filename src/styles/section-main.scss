@@ -27,7 +27,7 @@
   }
 }
 
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 767px) {
   .section-main {
     position: relative;
     overflow: hidden;
@@ -137,7 +137,6 @@
   }
 }
 
-
 @media screen and (min-width: 768px) {
   .section-main {
     min-height: 100vh;
@@ -203,9 +202,7 @@
       z-index: +3;
     }
   }
-}
 
-@media screen and (min-width: 960px) {
   .section-main_infoblock {
     padding: 40px 0 45px 50px;
 
