@@ -10,7 +10,7 @@
       height: 62px;
       background-color: white;
       border-radius: 4px;
-      box-shadow: 0 0 4px #595959;
+      box-shadow: 0.5px 0.866px 4px 0px rgba(0, 0, 0, 0.17);
 
       &:nth-child(even) {
         margin-right: 0;
@@ -18,9 +18,11 @@
 
       span {
         display: block;
-        margin: 20px auto;
+        margin: 22px auto;
         text-align: center;
         font-weight: 700;
+        text-transform: uppercase;
+        font-size: 15px;
       }
 
       &.is-active {
