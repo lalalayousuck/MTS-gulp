@@ -39,6 +39,12 @@
 }
 
 
+@media screen and (max-width: 767px) {
+  .section-tech {
+    height: auto;
+    padding: 0 20px;
+  }
+}
 
 @media screen and (max-width: 959px) {
   .col-left,
@@ -77,11 +83,6 @@
   .section-gpon_title {
     font-size: 20px;
     line-height: 60px;
-  }
-
-  .section-tech {
-    height: auto;
-    padding: 0 20px;
   }
 
   .btn-text {
@@ -128,79 +129,5 @@
   .section-ideas {
     padding-bottom: 60px;
     text-align: right;
-  }
-
-  .section-tech {
-    height: 100vh;
-    background-image: url(../assets/tech-bg.jpg);
-    background-position-x: center;
-    background-size: cover;
-  }
-
-  .section-tech_gradient {
-    height: 100vh;
-    padding: 0 10px;
-    background: linear-gradient(90deg, #f4f4f4, transparent);
-  }
-
-  .section-tech_infoblock {
-    width: 420px !important;
-    border-width: 0 !important;
-    float: right;
-    border: none;
-    margin: 16% -50px 0 0;
-    padding: 60px 60px 35px 25px !important;
-    transition: all 0.2s;
-
-    h1 {
-      font-size: 48px !important;
-    }
-
-    h2 {
-      margin-top: 15px;
-      font-size: 29px !important;
-    }
-
-    &:before {
-      @include icon(red-brush-tech);
-      position: absolute;
-      top: -20px;
-      left: -19px;
-      z-index: -1;
-    }
-  }
-
-  .section-gpon {
-    margin: -90px 0 0;
-    height: 90px;
-    padding: 0;
-    position: relative;
-    display: block;
-
-    img {
-      float: right;
-      margin-top: -90px;
-    }
-  }
-
-  .section-gpon_title {
-    margin-left: -5px;
-  }
-
-  .btn-text {
-    position: absolute;
-    bottom: -108px;
-    left: 5px;
-    padding: 5px 8px;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: 600;
-    opacity: 1;
-    transition: all 0.2s;
-    background-color: #e5242c;
-
-    &:hover {
-      opacity: 0.8;
-    }
   }
 }
