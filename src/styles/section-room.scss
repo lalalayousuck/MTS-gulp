@@ -5,11 +5,9 @@
 
 img.section-room_desc {
   margin: 0 auto;
-  width: 80%;
   max-width: 200px;
   vertical-align: top;
   margin-top: 20px;
-  margin-left: 10%;
 }
 
 .section-room_desc-text {
@@ -43,6 +41,16 @@ img.section-room_desc {
   }
 }
 
+@media screen and (max-width: 959px) {
+  img.section-room_desc {
+    display: block;
+  }
+
+  .section-room_desc-text {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+} 
 
 @media screen and (min-width: 960px) {
   img.section-room_desc {

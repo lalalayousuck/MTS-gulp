@@ -79,21 +79,46 @@
   }
 }
 
-.section-tech .section-list {
-  margin-top: 40%;
-}
+@media screen and (max-width: 959px) {
+  .section-list {
+    margin: 50px 0 30px 50px;
 
-.section-flat-plan .section-list {
-  margin-top: 125px;
-  width: 38%;
-}
+    li {
+      display: none;
 
-.section-room .section-list {
-  margin-top: 60px;
-}
+      .title {
+        position: relative;
+        font-size: 16px;
 
-.section-ideas .section-list {
-  margin-top: 150px;
+        &:before {
+          display: block;
+          position: absolute;
+          content: "/04";
+          color: grey;
+          font-size: 10px;
+          left: -48px;
+          top: 19px;
+        }
+      }
+
+      .desc {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      &:before {
+        font-size: 18px;
+      }
+
+      &.is-current {
+        display: block;
+
+        &:after {
+          top: -3px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 960px) {

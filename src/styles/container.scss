@@ -4,24 +4,18 @@
 
 .section-main,
 .section-room,
-.section-flat-plan,
-.section-ideas {
-  padding: 0 10px 10px;
+.section-tech {
+  padding: 0 20px;
   overflow: auto;
 }
 
+
 .section-gpon {
-  margin: -90px 0 0;
-  height: 90px;
   width: 100%;
   padding-left: 10px;
   background-color: #0082c5;
   z-index: +22;
   
-  img {
-    float: right;
-    margin-top: -90px;
-  }
 }
 
 .section-gpon_title {
@@ -46,18 +40,38 @@
   width: 56%;
 }
 
-.section-tech {
-  height: 100vh;
-  background-image: url(../assets/tech-bg.jpg);
-  background-position-x: center; 
-  background-size: 320%;
-  background-repeat: no-repeat;
-}
 
-.section-tech_gradient {
-  height: 100vh;
-  padding: 0 10px;
-  background: linear-gradient(90deg, #f4f4f4, transparent);
+
+@media screen and (max-width: 959px) {
+  .col-left,
+  .col-right {
+    width: 100%;
+  }
+
+  #ideas {
+    margin: 0  0 0 -20px;
+    text-align: center;
+  }
+
+  .section-gpon {
+    padding: 0;
+    text-align: center;
+    height: 110px;
+
+    img {
+      width: 100px;
+    }
+  }
+
+  .section-flat-plan,
+  .section-ideas {
+    padding: 0 10px;
+  }
+
+  .section-gpon_title {
+    font-size: 20px;
+    line-height: 60px;
+  }
 }
 
 @media screen and (min-width: 960px) {
@@ -88,14 +102,16 @@
   }
 
   .section-tech {
-    min-height: 100vh;
+    height: 100vh;
     background-image: url(../assets/tech-bg.jpg);
     background-position-x: center; 
     background-size: cover;
   }
 
   .section-tech_gradient {
-    height: 100%;
+    height: 100vh;
+    padding: 0 10px;
+    background: linear-gradient(90deg, #f4f4f4, transparent);
   }
 
   .section-tech_infoblock {
@@ -126,9 +142,16 @@
   }
 
   .section-gpon {
+    margin: -90px 0 0;
+    height: 90px;
     padding: 0;
     position: relative;
     display: block;
+
+    img {
+      float: right;
+      margin-top: -90px;
+    }
   }
 
   .section-gpon_title {

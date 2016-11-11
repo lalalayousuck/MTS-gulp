@@ -83,3 +83,19 @@
     content: '|'
   }
 }
+
+
+@media screen and (max-width: 959px) {
+  .share-btn {
+    width: 93px !important;
+    height: 42px !important;
+    margin: 0 10px 0 0 !important;
+    padding: 10px 0 0 14px !important;
+  }
+
+  .share-btn__vk {
+    margin-right: 0 !important;
+  }
+
+
+}

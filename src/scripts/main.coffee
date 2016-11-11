@@ -10,6 +10,7 @@ skrollr = require('./lib/skrollr')
 
 ga = require('./ga')
 require('./lib/component')
+require('./components/header')
 require('./components/share-btn')
 require('./components/custom')
 require('./components/todo-list')
