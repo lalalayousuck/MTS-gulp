@@ -12,6 +12,7 @@
   padding: 15px 20px;
   text-align: left;
   transition: 0.2s background, 0.2s box-shadow;
+  font-family: 'Proxima Nova';
 
   &:hover {
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
@@ -63,6 +64,7 @@
   margin: 9px 0 0;
   color: #999;
   font-size: 15px;
+  font-family: 'Proxima Nova';
 }
 
 .post-preview_info {

@@ -115,7 +115,7 @@ gulp.task('deploy', function() {
       sshConfig: {
         host: host,
         username: 'promo_imr',
-        privateKey: fs.readFileSync('/Users/user/.ssh/id_rsa')
+        privateKey: fs.readFileSync('/Users/Headonfire/.ssh/id_rsa')
       }
     })
 

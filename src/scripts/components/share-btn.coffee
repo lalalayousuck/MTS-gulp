@@ -30,20 +30,20 @@ Component.define 'shareBtn',
       params =
         app_id: 239854476109563
         display: 'popup'
-        link: 'http://promostaging.inmyroom.ru'
-        redirect_uri: 'http://promostaging.inmyroom.ru'
+        link: 'https://www.inmyroom.ru/landing/mtsazbukaremonta'
+        redirect_uri: 'https://www.inmyroom.ru/landing/mtsazbukaremonta'
 
       params.caption     = 'АЗБУКА РЕМОНТА'
-      params.picture     = 'https://pu.vk.com/c539223/upload.php?act=proxy_img&url=http%3A%2F%2Fwww.inmyroom.ru%2Flanding%2Fmtsazbukaremonta%2Fimages%2Fshare.jpg&hash=fb6d7f01cb7ca4a7af89a977b035cb27'
+      params.picture     = 'https://cdn.inmyroom.ru/uploads/upload/file/233/MHsLad56BX4.jpg'
       params.description = 'Хотите обновить интерьер и ждете впечатляющие результаты в короткие сроки? Чтобы ремонт не затягивался, важно предусмотреть всё. Воспользуйтесь списками дел и рекомендациями профессионалов.'
 
       url = 'https://www.facebook.com/dialog/feed?' + $.param(params)
 
     if type == 'vk'
-      url = "http://vk.com/share.php?" + $.param(url: 'http://promostaging.inmyroom.ru', title: 'АЗБУКА РЕМОНТА', description: 'Хотите обновить интерьер и ждете впечатляющие результаты в короткие сроки? Чтобы ремонт не затягивался, важно предусмотреть всё. Воспользуйтесь списками дел и рекомендациями профессионалов.', image: 'https://pu.vk.com/c539223/upload.php?act=proxy_img&url=http%3A%2F%2Fwww.inmyroom.ru%2Flanding%2Fmtsazbukaremonta%2Fimages%2Fshare.jpg&hash=fb6d7f01cb7ca4a7af89a977b035cb27') 
+      url = "http://vk.com/share.php?" + $.param(url: 'https://www.inmyroom.ru/landing/mtsazbukaremonta', title: 'АЗБУКА РЕМОНТА', description: 'Хотите обновить интерьер и ждете впечатляющие результаты в короткие сроки? Чтобы ремонт не затягивался, важно предусмотреть всё. Воспользуйтесь списками дел и рекомендациями профессионалов.', image: 'https://cdn.inmyroom.ru/uploads/upload/file/233/MHsLad56BX4.jpg') 
       
     if type == 'ok'
-      url = "https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&service=odnoklassniki&st.shareUrl='http://promostaging.inmyroom.ru'"
+      url = "https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&service=odnoklassniki&st.shareUrl='https://www.inmyroom.ru/landing/mtsazbukaremonta'"
 
     @$block.data('share-url', url)
 

@@ -97,7 +97,6 @@
     border: none;
     background-color: transparent;
     outline: none;
-    overflow: auto;
     min-width: 250px;
 
     &.new {
@@ -133,7 +132,7 @@
     &:after {
       @include icon(check);
       top: 4px;
-      left: 1px;
+      left: 2px;
       display: none;
     }
 
