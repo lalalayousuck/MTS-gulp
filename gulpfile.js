@@ -109,20 +109,34 @@ gulp.task('templates', function() {
 });
 
 gulp.task('deploy', function() {
-  var gulpSSH = new GulpSSH({
-    ignoreErrors: false,
-    sshConfig: {
-      host: 'app1.improvemedia.ru',
-      username: 'promo_imr',
-      privateKey: fs.readFileSync('/Users/user/.ssh/id_rsa')
-    }
-  })
+  ['app1.improvemedia.ru', 'app2.improvemedia.ru'].forEach(function(host) {
+    var gulpSSH = new GulpSSH({
+      ignoreErrors: false,
+      sshConfig: {
+        host: host,
+        username: 'promo_imr',
+        privateKey: fs.readFileSync('/Users/user/.ssh/id_rsa')
+      }
+    })
 
-  runSequence('clean', 'build', 'productionJS', 'productionCSS', 'productionIMG', 'gzip', function() {
     gulp.src('./build/**')
       .pipe(gulpSSH.dest('/srv/mtsazbukaremonta.inmyroom.ru/'))
   })
 })
+
+//var gulpSSH = new GulpSSH({
+//  ignoreErrors: false,
+//  sshConfig: {
+//    host: 'app1.improvemedia.ru',
+//    username: 'promo_imr',
+//    privateKey: fs.readFileSync('/Users/user/.ssh/id_rsa')
+//  }
+//})
+
+//runSequence('clean', 'build', 'productionJS', 'productionCSS', 'productionIMG', 'gzip', function() {
+//  gulp.src('./build/**')
+//    .pipe(gulpSSH.dest('/srv/mtsazbukaremonta.inmyroom.ru/'))
+//})
 
 // gulp.task('deploy', function() {
 //   var gulpSSH = new GulpSSH({

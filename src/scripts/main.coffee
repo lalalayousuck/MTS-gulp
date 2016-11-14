@@ -17,9 +17,10 @@ require('./components/todo-list')
 
 
 attachFastClick(document.body)
+
 $(document).ready ->
 
-  skrollr.init()
+  skrollr.init() if window.innerWidth > 960
 
   Component.vitalize()
 

@@ -28,6 +28,7 @@
 
 .paragraph-toggler {
   border-bottom: 2px dashed #888888;
+  margin-left: 5px;
   cursor: pointer;
 }
 
@@ -92,6 +93,7 @@
 
   input.text {
     height: 16px;
+    line-height: 16px;
     border: none;
     background-color: transparent;
     outline: none;
