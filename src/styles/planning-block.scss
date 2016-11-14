@@ -95,8 +95,10 @@
     height: 16px;
     line-height: 16px;
     border: none;
+    min-height: 20px;
     background-color: transparent;
     outline: none;
+    overflow: auto;
     min-width: 250px;
 
     &.new {
@@ -181,6 +183,11 @@
 
     * {
       font-size: 14px;
+    }
+
+    input.text {
+      min-height: 20px;
+      min-width: 250px;
     }
   }
 
